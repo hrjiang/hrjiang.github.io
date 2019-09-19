@@ -46,23 +46,35 @@
       <p>
     <ul>
       <li>
-        <b>2019-09-12   Thu.   09:00-10:00.  Hanru Jiang.</b>
+        <b>2019-09-??   ????   ????????.  Wenjun Shi.</b>
         <br>Topic: Quantum Compiler Verification.
-        <a href="slides/2019-09-12.pdf">[slides]</a>
+        <a >[slides]</a>
         <div>
-          <br>Y. Shi et. al., Contract-based verification of a realistic quantum compiler. arXiv.1908.08963
+          <br>K. Hietala et. al., A Verified Optimizer for Quantum Circuits. Draft.
           <br>
-          <a href="https://arxiv.org/abs/1908.08963">[link]</a>
-          <a href="papers/2019-09-12.pdf">[local copy]</a>
+          <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">[link]</a>
+          <a href="papers/voqc_draft.pdf">[local copy]</a>
           <br>
           <details>
             <summary>Abstract</summary>
-            <p>In this paper, we present CertiQ, a mostly-automated verification framework for the Qiskit quantum compiler. To our knowledge, CertiQ is the first effort to apply formal verification and SMT reasoning to a real-world quantum compiler. Qiskit is currently the most complete and widely-used open-source quantum software stack from low-level compilation to high-level quantum algorithms. With growing community contributions, the Qiskit compiler is in need of code quality control and verification down to the compilation level to guarantee reliability of scientific work that uses it. CertiQ is deeply integrated into the Qiskit compiler (called Terra), providing abstract specifications for quantum compiler data structures and offering verifiable contracts that specify the behaviors of compilation phases with heavy optimizations. CertiQ enables verification of the existing implementation of the Qiskit compiler and future code submissions in a mostly-automated manner using invariant-guided contracts and contract continuation. With these techniques in place, developers need to provide limited inputs only where function contracts and loop invariant cannot be inferred automatically. The CertiQ verification procedure discovers several critical bugs, some of which are unique to quantum soft-ware. Our extensive case studies on four compiler phases of Qiskit demonstrate that CertiQ is effective for verification of quantum compilers with a low proof burden.</p>
+            <p>We present voqc, the first verified compiler for quantum circuits, written using the Coq proof assistant.
+              Quantum circuits are expressed as programs in a simple, low-level language called sqir, which is deeply
+              embedded in Coq. Optimizations and other transformations are expressed as Coq functions, which are proved
+              correct with respect to a semantics of sqir programs. sqir is also sufficiently expressive write source programs
+              and prove them correct. We evaluate voqc’s verified optimizations on a series of benchmarks, and it performs
+              comparably to industrial strength compilers. voqc’s optimizations reduce total gate counts on average by 8.4%
+              (and rotation gates on average by 16.1%) on a benchmark of 29 circuit programs compared to a 4.7% reduction
+              (resp, a 8.3% reduction) when using IBM’s Qiskit compiler at optimization level 2.
             </p>
           </details>
-      </div>
+        </div>
         <br><br>
+      </li>
 
+      <li>
+        <b>2019-10-??   ????   ????????.  Yuxin Deng.</b>
+        <br>Topic: TBD
+        <br><br>
       </li>
     </ul>
       <p><p>
@@ -75,7 +87,25 @@
   <tr>
     <td>
       <ul>
-        
+        <li>
+          <b>2019-09-12   Thu.   09:00-11:00.  Hanru Jiang.</b>
+          <br>Topic: Quantum Compiler Verification.
+          <a href="slides/2019-09-12.pdf">[slides]</a>
+          <div>
+            <br>Y. Shi et. al., Contract-based verification of a realistic quantum compiler. arXiv.1908.08963
+            <br>
+            <a href="https://arxiv.org/abs/1908.08963">[link]</a>
+            <a href="papers/2019-09-12.pdf">[local copy]</a>
+            <br>
+            <details>
+              <summary>Abstract</summary>
+              <p>In this paper, we present CertiQ, a mostly-automated verification framework for the Qiskit quantum compiler. To our knowledge, CertiQ is the first effort to apply formal verification and SMT reasoning to a real-world quantum compiler. Qiskit is currently the most complete and widely-used open-source quantum software stack from low-level compilation to high-level quantum algorithms. With growing community contributions, the Qiskit compiler is in need of code quality control and verification down to the compilation level to guarantee reliability of scientific work that uses it. CertiQ is deeply integrated into the Qiskit compiler (called Terra), providing abstract specifications for quantum compiler data structures and offering verifiable contracts that specify the behaviors of compilation phases with heavy optimizations. CertiQ enables verification of the existing implementation of the Qiskit compiler and future code submissions in a mostly-automated manner using invariant-guided contracts and contract continuation. With these techniques in place, developers need to provide limited inputs only where function contracts and loop invariant cannot be inferred automatically. The CertiQ verification procedure discovers several critical bugs, some of which are unique to quantum soft-ware. Our extensive case studies on four compiler phases of Qiskit demonstrate that CertiQ is effective for verification of quantum compilers with a low proof burden.</p>
+              </p>
+            </details>
+          </div>
+          <br><br>
+  
+        </li>
       </ul>
       <p>
       <br>
@@ -93,6 +123,12 @@
           Contract-based verification of a realistic quantum compiler. 
           arXiv.1908.08963
           <a href="https://arxiv.org/abs/1908.08963">[link]</a>
+        </li>
+        <li>
+          K. Hietala et. al., 
+          A Verified Optimizer for Quantum Circuits. 
+          Draft.
+          <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">[link]</a>
         </li>
         <li>
           L. Lao et. al.,
@@ -113,7 +149,7 @@
     <address><a href="mailto://jianghr@pcl.ac.cn">Hanru Jiang</a></address>
     <!-- Created: Tue Sep 2 21:59:18 EST 2019 -->
     <!-- hhmts start -->
-Last modified: Tue Sep 6, 2019
+Last modified: Tue Sep 19, 2019
 <!-- hhmts end -->
   </td>
   </tr>
