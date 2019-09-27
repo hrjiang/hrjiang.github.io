@@ -52,21 +52,38 @@
         <br>Topic: Mapping of Quantum Cirtuits onto NISQ Superconducting Processors.
         <a >[slides]</a>
         <div>
-          <br>L. Lao et. al., Mapping of Quantum Cirtuits onto NISQ Superconducting Processors. .
+          <br>L. Lao et. al., Mapping of Quantum Cirtuits onto NISQ Superconducting Processors. arXiv:1908.04226.
           <br>
-          <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">[link]</a>
+          <a href="https://arxiv.org/abs/1908.04226">[link]</a>
           <a href="papers/2019_Lao_Mapping_of_quantum_circuits_onto_NISQ_superconducting_processors.pdf">[local copy]</a>
           <br>
           <details>
             <summary>Abstract</summary>
-            <p>We present voqc, the first verified compiler for quantum circuits, written using the Coq proof assistant.
-              Quantum circuits are expressed as programs in a simple, low-level language called sqir, which is deeply
-              embedded in Coq. Optimizations and other transformations are expressed as Coq functions, which are proved
-              correct with respect to a semantics of sqir programs. sqir is also sufficiently expressive write source programs
-              and prove them correct. We evaluate voqc’s verified optimizations on a series of benchmarks, and it performs
-              comparably to industrial strength compilers. voqc’s optimizations reduce total gate counts on average by 8.4%
-              (and rotation gates on average by 16.1%) on a benchmark of 29 circuit programs compared to a 4.7% reduction
-              (resp, a 8.3% reduction) when using IBM’s Qiskit compiler at optimization level 2.
+            <p>A number of quantum processors consisting of a few tens of noisy qubits already exist, 
+              and are called Noisy Intermediate-Scale Quantum (NISQ) devices. 
+              Their low number of qubits precludes the use of quantum error correction procedures, 
+              and then only small-size quantum algorithms can be successfully run. 
+              These quantum algorithms need to be compiled to respect the constraints imposed by 
+              the quantum processor, known as the mapping or routing problem. 
+              The mapping will result in an increase of the number of gates and circuit depth, 
+              decreasing the algorithm's success rate. In this paper, we present a mapper called 
+              Qmap that makes quantum circuits executable on the Surface-17 processor, 
+              a scalable processor with a surface code architecture. It takes into account 
+              not only the elementary gate set and qubit connectivity constraints but also 
+              the restrictions imposed by the use of shared classical control, 
+              which have not been considered so far. Qmap is embedded in the OpenQL compiler and 
+              uses a configuration file where the processor's characteristics are described and 
+              that makes it capable of targeting different quantum processors. 
+              To show this flexibility and evaluate its performance, we map 56 quantum benchmarks 
+              on two different superconducting quantum processors, the Surface-17 (17 qubits) and 
+              the IBM Q Tokyo (20 qubits), while using different routing strategies. 
+              We show that the best router can reduce the resulting overhead up to 80% (72%) 
+              for the number of gates and up to 71.4% (66.7%) for the circuit latency (depth) on 
+              the Surface-17 (IBM Q Tokyo) when compared to the baseline (trivial router). 
+              In addition, having a slightly higher qubit connectivity helps to decrease 
+              the number of inserted movement operations (up to 82.3%). 
+              Finally, we analyze how the mapping affects the reliability of some small quantum 
+              circuits. Their fidelity shows a decrease that ranges from 1.8% to 13.8%.
             </p>
           </details>
         </div>
@@ -120,7 +137,7 @@
           <br>Topic: Quantum Compiler Verification.
           <a href="slides/2019-09-12.pdf">[slides]</a>
           <div>
-            <br>Y. Shi et. al., Contract-based verification of a realistic quantum compiler. arXiv.1908.08963
+            <br>Y. Shi et. al., Contract-based verification of a realistic quantum compiler. arXiv.1908.08963.
             <br>
             <a href="https://arxiv.org/abs/1908.08963">[link]</a>
             <a href="papers/2019-09-12.pdf">[local copy]</a>
@@ -150,7 +167,7 @@
         <li>
           Y. Shi et. al., 
           Contract-based verification of a realistic quantum compiler. 
-          arXiv.1908.08963
+          arXiv.1908.08963.
           <a href="https://arxiv.org/abs/1908.08963">[link]</a>
         </li>
         <li>
@@ -162,7 +179,7 @@
         <li>
           L. Lao et. al.,
           Mapping of quantum circuits onto NISQ superconducting processors.
-          arXiv.1908.04226
+          arXiv.1908.04226.
           <a href="https://arxiv.org/abs/1908.04226">[link]</a>
         </li>
         <li>TBD...</li>  
