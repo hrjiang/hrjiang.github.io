@@ -1,30 +1,70 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <style type="text/css">
-  details {
-    color: black;
-    background: white;
-    margin: 10px 0;
-  }
-
-  summary {
-    color: black;
-    background: white;
-  }
-
-  li {
-    margin: 10px 0;
-  }
-
   #wrap {
     width: 860;
     margin: 0 auto;
+    font-family: "Optima";
+  }
+
+  #info {
+    height: 150px;
+    vertical-align:middle;
+  }
+
+  #info img {
+    float: left;
+    margin-right: 50px;
+    width: 150px;
+    height: 150px
+  }
+
+  #info txt {
+    float: left;
+    width: 600px;
+  }
+
+  #info h1 {
+    font-family: "Impact";
+  }
+
+  #info p {
+    text-align: right;
   }
 
   h3 {
     background: #e0e0e8;
     margin: 20px 0;
   }
+
+  li>p {
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+
+  #reading details {
+    margin: 5px 0;
+    margin-left: 20px;
+  }
+  #reading details>div {
+    font-family: arial;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:1px dashed;
+    border-color: gainsboro;
+  }
+  #reading details>div>p {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+
+  }
+  summary {
+    font-weight: bold;
+  }
+
 </style>
 
 <html>
@@ -38,25 +78,16 @@
 <body>
   <div id="wrap">
     <!--------------INFO--------------->
-    <div>
-      <table border=0 cellpadding=0 cellspacing=0>
-        <tr>
-          <td>
-            <img src="CQC.jpeg" width=180 height=180>
-          </td>
-          <td>&nbsp &nbsp &nbsp &nbsp </td>
-          <td>
-            <h1>CQC Seminar</h1>
-            <p>
-              On quantum programming language / compilation / architecture / verification...
-              <br>
-              <br>
-              Room 2005 @ <a href="https://www.pcl.ac.cn">Peng Cheng Lab</a>,
-              XYLink terminal ID: 20835468
-              <br>
-          </td>
-        </tr>
-      </table>
+    <div id="info">
+      <img src="CQC.jpeg">
+      <txt>
+          <h1>CQC Seminar</h1>
+          <p>on quantum programming language / compilation / architecture/ verification ...</p>
+          <p>
+            2005 @ <a href="https://www.pcl.ac.cn">Peng Cheng Lab</a>,
+            XYLink terminal ID: 20835468
+          </p>
+        </txt>
     </div>
 
     <!------------------------>
@@ -64,164 +95,145 @@
     <!------------------------>
     <div>
       <h3>Upcomming</h3>
-
       <ul>
         <li>
-          <b>2019-11-01 Fri. 09:00-11:00. Ai Liu.</b>
-          <br>Topic: A Coalgebraic Semantics Framework for Quantum Systems.
-          <a href="slides/Ai-20191101.pptx">[slides]</a>
-          <div>
-            <br>A. Liu and M. Sun, A Coalgebraic Semantics Framework for Quantum Systems. To appear at
-            <i>ICFEM'19</i>.
-            <br>
-            <a href="papers/Liu2019_A_coalgebraic_semantics_framework_for_quantum_systems.pdf">[local copy]</a>
-            <br>
-            <details>
-              <summary>Abstract</summary>
-              <p>
-                Asaquantumcounterpartoflabeledtransitionsystem(LTS), quantum labeled transition system (QLTS)
-                is a powerful formalism for modeling quantum programs or protocols, and gives a categorical
-                understanding for quantum computation. With the help of quantum branching monad,
-                QLTS provides a framework extending some ideas in non-deterministic or probabilistic systems
-                to quantum systems. In this paper, we propose the notion of reactive quantum system (RQS),
-                a variant of QLTS, and develop a coalgebraic semantics for both QLTS and RQS by an endofunctor
-                on the category of convex sets, which has a final coalgebra. Such a coalgebraic semantics
-                provides a unifying abstract interpretation for both QLTS and RQS. The notions of bisimulation
-                and simulation can be employed to compare the behavior of different types of quantum systems
-                and judge whether a coalgebra can be behaviorally simulated by another.
-              </p>
-            </details>
-          </div>
-          <br><br>
+          TBD...
         </li>
       </ul>
-
     </div>
 
     <!------------------------>
     <!--  Previous          -->
     <!------------------------>
-    <h3>Previous</h3>
-    <ul>
-      <li>
-        <b>2019-10-22 Tue. 14:00-16:00. Xiang Fu.</b>
-        <br>Topic: Understanding Quantum Control Processor Capabilities and Limitations through Circuit
-        Characterization.
-        <a href="slides/Xiang-20191022.pptx">[slides]</a>
-        <div>
-          <br>A. Butko et. al., Understanding Quantum Control Processor Capabilities and Limitations through Circuit
-          Characterization. arXiv:1909.11719.
-          <br>
-          <a href="https://arxiv.org/abs/1909.11719">[link]</a>
-          <a
-            href="papers/2019_arXiv_Butko_Understanding Quantum Control Processor Capabilities and Limitations through Circuit Characterization.pdf">[local
-            copy]</a>
-        </div>
-        <br><br>
-      </li>
-      <li>
-        <b>2019-10-11 Fri. 09:00-11:00. Lingling Lao.</b>
-        <br>Topic: Mapping of Quantum Cirtuits onto NISQ Superconducting Processors.
-        <a href="slides/mapping_slides_llao.pdf">[slides]</a>
-        <a href="https://drive.google.com/file/d/14bfggqckGelYLHTJjWpU3MrJ5DTAi4r9/view?usp=sharing">[audio]</a>
-        <div>
-          <br>L. Lao et. al., Mapping of Quantum Cirtuits onto NISQ Superconducting Processors. arXiv:1908.04226.
-          <br>
-          <a href="https://arxiv.org/abs/1908.04226">[link]</a>
-          <a href="papers/2019_Lao_Mapping_of_quantum_circuits_onto_NISQ_superconducting_processors.pdf">[local
-            copy]</a>
-        </div>
-        <br><br>
-      </li>
-      <li>
-        <b>2019-09-25 Wed. 09:00-11:00. Wenjun Shi.</b>
-        <br>Topic: Quantum Compiler Verification.
-        <a href="slides/voqc-wenjun.pptx">[slides]</a>
-        <div>
-          <br>K. Hietala et. al., A Verified Optimizer for Quantum Circuits. Draft.
-          <br>
-          <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">[link]</a>
-          <a href="papers/voqc_draft.pdf">[local copy]</a>
-        </div>
-        <br><br>
-      </li>
+    <div>
+      <h3>Previous</h3>
+      <ul>
+        <li>
+          <b>2019-11-01 Fri. 09:00-11:00. Ai Liu.
+            <a href="slides/Ai-20191101.pptx">[slides]</a>
+          </b>
+          <p>A. Liu and M. Sun, A Coalgebraic Semantics Framework for Quantum Systems. To appear at <i>ICFEM'19</i>.
+            <a href="papers/Liu2019_A_coalgebraic_semantics_framework_for_quantum_systems.pdf">[local copy]</a>
+          </p>
+        </li>
+        <li>
+          <b>2019-10-22 Tue. 14:00-16:00. Xiang Fu.</b>
+          <a href="slides/Xiang-20191022.pptx">[slides]</a>
+          <p>A. Butko et. al., Understanding Quantum Control Processor Capabilities and Limitations through Circuit
+            Characterization. arXiv:1909.11719.
+            <a href="https://arxiv.org/abs/1909.11719">[link]</a>
+            <a
+              href="papers/2019_arXiv_Butko_Understanding Quantum Control Processor Capabilities and Limitations through Circuit Characterization.pdf">[local
+              copy]</a>
+          </p>
+        </li>
+        <li>
+          <b>2019-10-11 Fri. 09:00-11:00. Lingling Lao.
+            <a href="slides/mapping_slides_llao.pdf">[slides]</a>
+            <a href="https://drive.google.com/file/d/14bfggqckGelYLHTJjWpU3MrJ5DTAi4r9/view?usp=sharing">[audio]</a>
+          </b>
+          <p>L. Lao et. al., Mapping of Quantum Cirtuits onto NISQ Superconducting Processors. arXiv:1908.04226.
+            <a href="https://arxiv.org/abs/1908.04226">[link]</a>
+            <a href="papers/2019_Lao_Mapping_of_quantum_circuits_onto_NISQ_superconducting_processors.pdf">[local
+              copy]</a>
+          </p>
+        </li>
+        <li>
+          <b>2019-09-25 Wed. 09:00-11:00. Wenjun Shi.
+            <a href="slides/voqc-wenjun.pptx">[slides]</a>
+          </b>
+          <p>
+            K. Hietala et. al., A Verified Optimizer for Quantum Circuits. Draft.
+            <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">[link]</a>
+            <a href="papers/voqc_draft.pdf">[local copy]</a>
+          </p>
+        </li>
 
-      <li>
-        <b>2019-09-12 Thu. 09:00-11:00. Hanru Jiang.</b>
-        <br>Topic: Quantum Compiler Verification.
-        <a href="slides/2019-09-12.pdf">[slides]</a>
-        <div>
-          <br>Y. Shi et. al., Contract-based verification of a realistic quantum compiler. arXiv.1908.08963.
-          <br>
-          <a href="https://arxiv.org/abs/1908.08963">[link]</a>
-          <a href="papers/2019-09-12.pdf">[local copy]</a>
-        </div>
-        <br><br>
-      </li>
-    </ul>
+        <li>
+          <b>2019-09-12 Thu. 09:00-11:00. Hanru Jiang.
+            <a href="slides/2019-09-12.pdf">[slides]</a>
+          </b>
+          <p>
+            Y. Shi et. al., Contract-based verification of a realistic quantum compiler. arXiv.1908.08963.
+            <a href="https://arxiv.org/abs/1908.08963">[link]</a>
+            <a href="papers/2019-09-12.pdf">[local copy]</a>
+          </p>
+        </li>
+      </ul>
+    </div>
 
     <!------------------------>
     <!--  Reading List      -->
     <!------------------------>
-    <h3>Reading List</h3>
-    <details>
-      <summary>
-        Y. Shi et. al.,
-        Contract-based verification of a realistic quantum compiler.
-        arXiv.1908.08963.
-        <a href="https://arxiv.org/abs/1908.08963">[link]</a>
-      </summary>
-    </details>
-    <details>
-      <summary>
-        K. Hietala et. al.,
-        A Verified Optimizer for Quantum Circuits.
-        Draft.
-        <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">[link]</a>
-      </summary>
-    </details>
-    <details>
-      <summary>
-        L. Lao et. al.,
-        Mapping of quantum circuits onto NISQ superconducting processors.
-        arXiv.1908.04226.
-        <a href="https://arxiv.org/abs/1908.04226">[link]</a>
-      </summary>
-    </details>
-    <details>
-      <summary>
-        A. Butko et. al.,
-        Understanding Quantum Control Processor Capabilities and Limitations through Circuit Characterization.
-        arXiv:1909.11719.
-        <a href="https://arxiv.org/abs/1909.11719">[link]</a>
-      </summary>
-    </details>
-    <details>
-      <summary>
-        A. S. Green et. al.,
-        Quipper: A Scalable Quantum Programming language.
-        PLDI '13.
-        <a href="https://doi.acm.org/10.1145/2491956.2462177">[link]</a>
-        <a href="https://www.mathstat.dal.ca/~selinger/quipper/">[project page]</a>
-      </summary>
-      Quipper: circuit description language, embeded DSL, hosted by Haskell, compile to ?.
-    </details>
-    <details>
-      <summary>
-        Y. Shi et. al.,
-        Optimized Compilation of Aggregated Instructions for Realistic Quantum Computers.
-        ASPLOS '19.
-        <a href="https://doi.org/10.1145/3297858.3304018">[link]</a>
-      </summary>
-      
-    </details>
+    <div id="reading">
+      <h3>Reading List</h3>
+      <details>
+        <summary>
+          Y. Shi et. al.,
+          Contract-based verification of a realistic quantum compiler.
+          arXiv.1908.08963.
+          <a href="https://arxiv.org/abs/1908.08963">[link]</a>
+        </summary>
+      </details>
+      <details>
+        <summary>
+          K. Hietala et. al.,
+          A Verified Optimizer for Quantum Circuits.
+          Draft.
+          <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">[link]</a>
+        </summary>
+      </details>
+      <details>
+        <summary>
+          L. Lao et. al.,
+          Mapping of quantum circuits onto NISQ superconducting processors.
+          arXiv.1908.04226.
+          <a href="https://arxiv.org/abs/1908.04226">[link]</a>
+        </summary>
+      </details>
+      <details>
+        <summary>
+          A. Butko et. al.,
+          Understanding Quantum Control Processor Capabilities and Limitations through Circuit Characterization.
+          arXiv:1909.11719.
+          <a href="https://arxiv.org/abs/1909.11719">[link]</a>
+        </summary>
+      </details>
+      <details>
+        <summary>
+          A. S. Green et. al.,
+          Quipper: A Scalable Quantum Programming language.
+          PLDI '13.
+          <a href="https://doi.acm.org/10.1145/2491956.2462177">[link]</a>
+          <a href="https://www.mathstat.dal.ca/~selinger/quipper/">[project page]</a>
+        </summary>
+        <div>
+          <p>
+            Quipper: circuit description language, embeded DSL, hosted by Haskell, compile to ?.
+            </p>
+
+        </div>
+      </details>
+      <details>
+        <summary>
+          Y. Shi et. al.,
+          Optimized Compilation of Aggregated Instructions for Realistic Quantum Computers.
+          ASPLOS '19.
+          <a href="https://doi.org/10.1145/3297858.3304018">[link]</a>
+        </summary>
+      </details>
+    </div>
     <br>
     <hr>
+    <!------------------------>
+    <!--  Page Info         -->
+    <!------------------------>
     <address><a href="mailto://jianghr@pcl.ac.cn">Hanru Jiang</a></address>
     <!-- Created: Tue Sep 2 21:59:18 EST 2019 -->
     <!-- hhmts start -->
     Last modified: Fri Nov 1, 2019
     <!-- hhmts end -->
+
   </div>
 
 </body>
