@@ -69,6 +69,7 @@
   }
 
   ul {
+    list-style-type: square;
     padding-inline-start: 30px;
   }
 
@@ -80,23 +81,27 @@
     margin: 5 0 5 10;
   }
 
+  #reading ul>li {
+    list-style-type: none;
+    margin: 10 0 10 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
   #reading details {
     margin: 5 0 0 15;
   }
 
-  #reading details>div {
+  #reading details>p {
     font-family: arial;
     margin: 10px 0px 10px 20px;
+    padding: 5px 10px 5px 10px;
     border: 1px dashed;
     border-color: #dddddd;
   }
 
-  #reading details>div>p {
-    margin: 5px 10px 5px 10px;
-  }
-
   details summary::-webkit-details-marker {
-    font-size: 75%;
+    font-size: 70%;
   }
 
   #pageinfo {
@@ -111,11 +116,10 @@
   }
 
   a:visited {
-    color: #777777;
+    color: #1873a1;
   }
 
   a:hover {
-    color: #1873a1;
     text-decoration: underline;
   }
 </style>
@@ -153,7 +157,16 @@
       <h3>UPCOMING</h3>
       <ul style="list-style-type:square;">
         <li>
-          TBD...
+          <infocard>
+            <time>Nov. 18, 2019 · 14:00</time> | <speaker>Yuekang Li</speaker>
+          </infocard>
+          <p>
+            Jiyuan Wang, Ming Gao, Yu Jiang, Jianguang Lou, Yue Gao, Dongmei Zhang, Jiaguang Sun. 2018.
+            <a href="https://arxiv.org/pdf/1810.10310.pdf">QuanFuzz: Fuzz Testing of Quantum Program</a>.
+            <i>arXiv:1810.10310</i>.
+          </p>
+          <materials>
+          </materials>
         </li>
       </ul>
     </div>
@@ -163,7 +176,7 @@
     <!------------------------>
     <div>
       <h3>Previous</h3>
-      <ul style="list-style-type:square;">
+      <ul>
         <li>
           <infocard>
             <time>Nov. 1, 2019 · 9:00</time> | <speaker>Ai Liu</speaker>
@@ -192,8 +205,7 @@
           </p>
           <materials>
             <a href="slides/Xiang-20191022.pptx">[slides]</a>
-            <a
-              href="papers/2019_arXiv_Butko_Understanding Quantum Control Processor Capabilities and Limitations through Circuit Characterization.pdf">[paper]</a>
+            <a href="papers/2019_arXiv_Butko_Understanding Quantum Control Processor Capabilities and Limitations through Circuit Characterization.pdf">[paper]</a>
           </materials>
         </li>
         <li>
@@ -201,8 +213,9 @@
             <time>Oct. 11, 2019 · 9:00</time> | <speaker>Lingling Lao</speaker>
           </infocard>
           <p>
-            L. Lao et. al., 
-            <a href="https://arxiv.org/abs/1908.04226">Mapping of Quantum Cirtuits onto NISQ Superconducting Processors</a>.
+            L. Lao et. al.,
+            <a href="https://arxiv.org/abs/1908.04226">Mapping of Quantum Cirtuits onto NISQ Superconducting
+              Processors</a>.
             <i>arXiv:1908.04226</i>.
           </p>
           <materials>
@@ -247,68 +260,25 @@
     <!------------------------>
     <div id="reading">
       <h3>Reading List</h3>
-      <details>
-        <summary>
-          Y. Shi et. al.,
-          <a href="https://arxiv.org/abs/1908.08963">Contract-based verification of a realistic quantum compiler</a>.
-          <i>arXiv.1908.08963</i>.
-        </summary>
-      </details>
-      <details>
-        <summary>
-          K. Hietala et. al.,
-          <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">A Verified Optimizer for Quantum Circuits</a>.
-          <i>Draft</i>.
-          
-        </summary>
-      </details>
-      <details>
-        <summary>
-          L. Lao et. al.,
-          <a href="https://arxiv.org/abs/1908.04226">Mapping of quantum circuits onto NISQ superconducting processors</a>.
-          <i>arXiv.1908.04226</i>.
-        </summary>
-      </details>
-      <details>
-        <summary>
-          A. Butko et. al.,
-          <a href="https://arxiv.org/abs/1909.11719">Understanding Quantum Control Processor Capabilities and Limitations through Circuit Characterization</a>.
-          <i>arXiv:1909.11719</i>.
-          
-        </summary>
-      </details>
-      <details>
-        <summary>
-          A. S. Green et. al.,
-          <a href="https://doi.acm.org/10.1145/2491956.2462177">Quipper: A Scalable Quantum Programming language</a>.
-          <i>PLDI '13</i>.          
-          <a href="https://www.mathstat.dal.ca/~selinger/quipper/">[project page]</a>
-        </summary>
-        <div>
+      <ul>
+        <li>Quantum Programming Language and Semantics</li>
+        <details>
+          <summary>
+            Alexander S. Green, Peter LeFanu Lumsdaine, Neil J. Ross, Peter Selinger, and Benoît Valiron. 2013.
+            <a href="https://doi.acm.org/10.1145/2491956.2462177">Quipper: A Scalable Quantum Programming language</a>.
+            <i>PLDI '13</i>.
+            <a href="https://www.mathstat.dal.ca/~selinger/quipper/">[project page]</a>
+          </summary>
           <p>
             Quipper: circuit description language, embeded DSL, hosted by Haskell, compile to ?.
           </p>
-        </div>
-      </details>
-      <details>
-        <summary>
-          Y. Shi et. al.,
-          <a href="https://doi.org/10.1145/3297858.3304018">Optimized Compilation of Aggregated Instructions for Realistic Quantum Computers</a>.
-          <i>ASPLOS '19</i>.
-        </summary>
-        <div>
-          <p>
-
-          </p>
-        </div>
-      </details>
-      <details>
-        <summary>
-          K. Svore et. al.,
-          <a href="https://doi.org/10.1145/3183895.3183901">Q#: Enabling Scalable Quantum Computing and Development with a High-level DSL</a>.
-          <i>RWDSL '18</i>.
-        </summary>
-        <div>
+        </details>
+        <details>
+          <summary>
+            Krysta Svore, Alan Geller, Matthias Troyer, John Azariah, Christopher Granade, Bettina Heim, Vadym Kliuchnikov, Mariia Mykhailova, Andres Paz, and Martin Roetteler. 2018.
+            <a href="https://doi.org/10.1145/3183895.3183901">Q#: Enabling Scalable Quantum Computing and Development with a High-level DSL</a>.
+            <i>RWDSL '18</i>.
+          </summary>
           <p>
             Important features:
             i) separation between classical and quantum computations, i.e. functions and operations;
@@ -320,21 +290,156 @@
             Q:
             i) no target/backend?
           </p>
-        </div>
-      </details>
-      <details>
-        <summary>
-          M. Ying,
-          <a href="http://dl.acm.org/citation.cfm?doid=2049706.2049708">Floyd-Hoare Logic for Quantum Programs</a>.
-          <i>TOPLAS '11</i>.
-        </summary>
-        <div>
+        </details>
+
+
+
+        <li>Quantum Compilation</li>
+
+        <details>
+          <summary>
+            Kaitlin N. Smith, and Mitchell A. Thornton. 2019.
+            <a href="http://dl.acm.org/citation.cfm?doid=3307650.3322262">A Quantum Computational Compiler and Design Tool for Technology-specific Targets</a>.
+            <i>ISCA '19</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Marcos Yukio Siraichi, Vinícius Fernandes dos Santos, Caroline Collange, and Fernando Magno Quintão Pereira. 2019.
+            <a href="http://dl.acm.org/citation.cfm?doid=3366395.3360546">Qubit Allocation as a Combination of Subgraph Isomorphism and Token Swapping</a>.
+            <i>OOPSLA '19</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Yunong Shi, Nelson Leung, Pranav Gokhale, Zane Rossi, David I. Schuster, Henry Hoffmann, and Frederic T. Chong. 2019.
+            <a href="https://doi.org/10.1145/3297858.3304018">Optimized Compilation of Aggregated Instructions for Realistic Quantum Computers</a>.
+            <i>ASPLOS '19</i>.
+          </summary>
+          <div>
+            <p></p>
+          </div>
+        </details>
+        <details>
+          <summary>
+            Prakash Murali, Jonathan M. Baker, Ali Javadi Abhari, Frederic T. Chong, and Margaret Martonosi. 2019.
+            <a href="https://doi.org/10.1145/3297858.3304075">Noise-Adaptive Compiler Mappings for Noisy Intermediate-Scale Quantum Computers</a>.
+            <i>ASPLOS '19</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Gushu Li, Yufei Ding, and Yuan Xie. 2019.
+            <a href="https://doi.org/10.1145/3297858.3304023">Tackling the Qubit Mapping Problem for NISQ-Era Quantum Devices</a>.
+            <i>ASPLOS '19</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Pranav Gokhale, Yongshan Ding, Thomas Propson, Christopher Winkler, Nelson Leung, Yunong Shi, David I. Schuster, Henry Hoffmann, and Frederic T. Chong. 2019.
+            <a href="https://doi.org/10.1145/3352460.3358313">Partial Compilation of Variational Algorithms for Noisy Intermediate-Scale Quantum Machines</a>.
+            <i>MICRO-52</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Marcos Yukio Siraichi, Vinícius Fernandes dos Santos, Sylvain Collange, and Fernando Magno Quintão Pereira. 2018.
+            <a href="https://doi.org/10.1145/3168822">Qubit Allocation</a>.
+            <i>CGO’18</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Alwin Zulehner, Alexandru Paler, and Robert Wille. 2018.
+            <a href="https://ieeexplore.ieee.org/document/8382253/">An Efficient Methodology for Mapping Quantum Circuits to the IBM QX Architectures</a>.
+            <i>TCAD 38(7)</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Jeff Heckey, Shruti Patil, Ali JavadiAbhari, Adam Holmes, Daniel Kudrow, Kenneth R. Brown, Diana Franklin, Frederic T. Chong, and Margaret Martonosi. 2015.
+            <a href="http://dl.acm.org/citation.cfm?doid=2694344.2694357">Compiler Management of Communication and Parallelism for Quantum Computation</a>.
+            <i>ASPLOS '15</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Ali JavadiAbhari, Shruti Patil, Daniel Kudrow, Jeff Heckey, Alexey Lvov, Frederic T. Chong, Margaret Martonosi. 2014.
+            <a href="http://dx.doi.org/10.1145/2597917.2597939">ScaffCC: A Framework for Compilation and Analysis of Quantum Computing Programs</a>.
+            <i>CF '14</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Daniel Kudrow, Kenneth Bier, Zhaoxia Deng, Diana Franklin, Yu Tomita, Kenneth R. Brown, and Frederic T. Chong. 2013.
+            <a href="https://dl.acm.org/citation.cfm?doid=2485922.2485937">Quantum Rotations: A Case Study in Static and Dynamic Machine-Code Generation for Quantum Computers</a>.
+            <i>ISCA '13</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Krysta M. Svore, Alfred V. Aho, Andrew W. Cross, Isaac Chuang, and Igor L. Markov. 2006.
+            <a href="http://ieeexplore.ieee.org/document/1580386/">A Layered Software Architecture for Quantum Computing Design Tools</a>.
+            <i>Computer 39(1)</i>.
+          </summary>
+        </details>
+
+
+
+
+
+        <details>
+          <summary>
+            Lingling Lao, Daniel M. Manzano, Hans van Someren, Imran Ashraf, and Carmen G. Almudever. 2019.
+            <a href="https://arxiv.org/abs/1908.04226">Mapping of quantum circuits onto NISQ superconducting
+              processors</a>.
+            <i>arXiv.1908.04226</i>.
+          </summary>
+        </details>
+
+
+
+
+        <li>Quantum Hoare Logics</li>
+        <details>
+          <summary>
+            Mingsheng Ying,
+            <a href="http://dl.acm.org/citation.cfm?doid=2049706.2049708">Floyd-Hoare Logic for Quantum Programs</a>.
+            <i>TOPLAS '11</i>.
+          </summary>
           <p>
             Q:
             i) for deterministic quantum programs?
           </p>
-        </div>
-      </details>
+        </details>
+
+
+
+
+        <li>Verification of Quantum Algorithms</li>
+
+
+
+
+        <li>Misc.</li>
+        <details>
+          <summary>
+            Yunong Shi, Xupeng Li, Runzhou Tao, Ali Javadi-Abhari, Andrew W. Cross, Frederic T. Chong, and Ronghui Gu. 2019.
+            <a href="https://arxiv.org/abs/1908.08963">Contract-based verification of a realistic quantum compiler</a>.
+            <i>arXiv.1908.08963</i>.
+          </summary>
+        </details>
+        <details>
+          <summary>
+            Kesha Hietala, Robert Rand, Shih-Han Hung, Xiaodi Wu, and Michael Hicks. 2019.
+            <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">A Verified Optimizer for Quantum Circuits</a>.
+            <i>Draft</i>.
+          </summary>
+        </details>
+
+
+      </ul>
+
     </div>
 
 
@@ -346,7 +451,7 @@
         <address><a href="mailto://jianghr@pcl.ac.cn">Hanru Jiang</a></address>
         <!-- Created: Tue Sep 2 21:59:18 EST 2019 -->
         <!-- hhmts start -->
-        Last modified: Nov 5, 2019
+        Last modified: Nov 15, 2019
         <!-- hhmts end -->
       </p>
 
