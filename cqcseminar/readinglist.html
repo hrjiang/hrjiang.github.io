@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+    <title>CQC Seminar</title>
+    <meta name="keywords" content="CQC seminar on quantum PL/compilation/architecture/verification">
+    <link rel="icon" href="./CQC.jpeg" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <base target="_blank" />
+</head>
+
+<body>
+    <div id="wrap">
+        <!--------------INFO--------------->
+        <div id="info">
+            <div id="descr">
+                <h1>CQC Seminar</h1>
+                <p>on quantum programming language / compilation / architecture / verification ...</p>
+            </div>
+            <div id="venue">
+                <p>
+                    2005 @ <a href="https://www.pcl.ac.cn">Peng Cheng Lab</a>
+                    <br> XYLink: 20835468
+                </p>
+            </div>
+        </div>
+        <!------------------------>
+        <!--  Navication        -->
+        <!------------------------>
+        <div id="nav">
+            <ul>
+                <li>
+                    <a href="index.html" target="_self">home</a>
+                </li>
+                <li>
+                    <a href="previous.html" target="_self">previous</a>
+                </li>
+                <li class="current_page_item">
+                    <a href="readinglist.html" target="_self">reading list</a>
+                </li>
+            </ul>
+        </div>
+        <!------------------------>
+        <!--  Reading List      -->
+        <!------------------------>
+        <div id="reading">
+            <ul>
+                <!------------------------>
+                <!--  QPL & Semantics   -->
+                <!------------------------>
+                <li>Quantum Programming Language and Semantics</li>
+                <details>
+                    <summary>
+                        Krysta Svore, Alan Geller, Matthias Troyer, John Azariah, Christopher Granade, Bettina Heim, Vadym Kliuchnikov, Mariia Mykhailova, Andres Paz, and Martin Roetteler. 2018.
+                        <a href="https://doi.org/10.1145/3183895.3183901">Q#: Enabling Scalable Quantum Computing and Development with a High-level DSL</a>.
+                        <i>RWDSL '18</i>.
+                    </summary>
+                    <p>
+                        Important features: i) separation between classical and quantum computations, i.e. functions and operations; ii) standalone algorithm definition language; iii) using/borrowing for qubit allocation/borrowing; iv) variants and functors, i.e. control/adjoint
+                        and Controlled/Adjoint.
+                    </p>
+                    <p>
+                        Q: i) no target/backend?
+                    </p>
+                </details>
+                <details>
+                    <summary>
+                        Jennifer Paykin, Robert Rand, and Steve Zdancewic. 2017.
+                        <a href="http://dx.doi.org/10.1145/3009837.3009894">QWIRE: A Core Language for Quantum Circuits</a>.
+                        <i>POPL '17</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Alexander S. Green, Peter LeFanu Lumsdaine, Neil J. Ross, Peter Selinger, and Benoît Valiron. 2013.
+                        <a href="https://doi.acm.org/10.1145/2491956.2462177">Quipper: A Scalable Quantum Programming language</a>.
+                        <i>PLDI '13</i>.
+                        <a href="https://www.mathstat.dal.ca/~selinger/quipper/">[project page]</a>
+                    </summary>
+                    <p>
+                        Quipper: circuit description language, embeded DSL, hosted by Haskell, compile to ?.
+                    </p>
+                </details>
+                <details>
+                    <summary>
+                        Ali Javadi Abhari, Arvin Faruque, Mohammad Javad Dousti, Lukas Svec, Oana Catu, Amlan Chakrabati, Chen-Fu Chiang, Seth Vanderwilt, John Black, Fred Chong, Margaret Martonosi, Martin Suchara, Ken Brown, Massoud Pedram, and Todd Brun. 2000.
+                        <a href="https://www.cs.princeton.edu/research/techreps/TR-934-12">Scaffold: Quantum Programming Language</a>.
+                        <i>Technical report</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Sanders J.W. and Zuliani P. 2000.
+                        <a href="https://doi.org/10.1007/10722010_6">Quantum Programming</a>.
+                        <i>In: Backhouse R., Oliveira J.N. (eds) Mathematics of Program Construction. MPC '00. Lecture Notes in Computer Science, vol 1837.</i>
+                    </summary>
+                </details>
+
+
+
+                <!------------------------>
+                <!--  Compilation       -->
+                <!------------------------>
+                <li>Quantum Compilation</li>
+
+                <details>
+                    <summary>
+                        Kaitlin N. Smith, and Mitchell A. Thornton. 2019.
+                        <a href="http://dl.acm.org/citation.cfm?doid=3307650.3322262">A Quantum Computational Compiler and Design Tool for Technology-specific Targets</a>.
+                        <i>ISCA '19</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Marcos Yukio Siraichi, Vinícius Fernandes dos Santos, Caroline Collange, and Fernando Magno Quintão Pereira. 2019.
+                        <a href="http://dl.acm.org/citation.cfm?doid=3366395.3360546">Qubit Allocation as a Combination of Subgraph Isomorphism and Token Swapping</a>.
+                        <i>Proc. ACM Program. Lang. 3, OOPSLA, Article 120 (October 2019), 29 pages</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Yunong Shi, Nelson Leung, Pranav Gokhale, Zane Rossi, David I. Schuster, Henry Hoffmann, and Frederic T. Chong. 2019.
+                        <a href="https://doi.org/10.1145/3297858.3304018">Optimized Compilation of Aggregated Instructions for Realistic Quantum Computers</a>.
+                        <i>ASPLOS '19</i>.
+                    </summary>
+                    <div>
+                        <p></p>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        Prakash Murali, Jonathan M. Baker, Ali Javadi Abhari, Frederic T. Chong, and Margaret Martonosi. 2019.
+                        <a href="https://doi.org/10.1145/3297858.3304075">Noise-Adaptive Compiler Mappings for Noisy Intermediate-Scale Quantum Computers</a>.
+                        <i>ASPLOS '19</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Gushu Li, Yufei Ding, and Yuan Xie. 2019.
+                        <a href="https://doi.org/10.1145/3297858.3304023">Tackling the Qubit Mapping Problem for NISQ-Era Quantum Devices</a>.
+                        <i>ASPLOS '19</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Pranav Gokhale, Yongshan Ding, Thomas Propson, Christopher Winkler, Nelson Leung, Yunong Shi, David I. Schuster, Henry Hoffmann, and Frederic T. Chong. 2019.
+                        <a href="https://doi.org/10.1145/3352460.3358313">Partial Compilation of Variational Algorithms for Noisy Intermediate-Scale Quantum Machines</a>.
+                        <i>MICRO-52</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Marcos Yukio Siraichi, Vinícius Fernandes dos Santos, Sylvain Collange, and Fernando Magno Quintão Pereira. 2018.
+                        <a href="https://doi.org/10.1145/3168822">Qubit Allocation</a>.
+                        <i>CGO’18</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Alwin Zulehner, Alexandru Paler, and Robert Wille. 2018.
+                        <a href="https://ieeexplore.ieee.org/document/8382253/">An Efficient Methodology for Mapping Quantum Circuits to the IBM QX Architectures</a>.
+                        <i>TCAD 38(7)</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Jeff Heckey, Shruti Patil, Ali JavadiAbhari, Adam Holmes, Daniel Kudrow, Kenneth R. Brown, Diana Franklin, Frederic T. Chong, and Margaret Martonosi. 2015.
+                        <a href="http://dl.acm.org/citation.cfm?doid=2694344.2694357">Compiler Management of Communication and Parallelism for Quantum Computation</a>.
+                        <i>ASPLOS '15</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Ali JavadiAbhari, Shruti Patil, Daniel Kudrow, Jeff Heckey, Alexey Lvov, Frederic T. Chong, Margaret Martonosi. 2014.
+                        <a href="http://dx.doi.org/10.1145/2597917.2597939">ScaffCC: A Framework for Compilation and Analysis of Quantum Computing Programs</a>.
+                        <i>CF '14</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Daniel Kudrow, Kenneth Bier, Zhaoxia Deng, Diana Franklin, Yu Tomita, Kenneth R. Brown, and Frederic T. Chong. 2013.
+                        <a href="https://dl.acm.org/citation.cfm?doid=2485922.2485937">Quantum Rotations: A Case Study in Static and Dynamic Machine-Code Generation for Quantum Computers</a>.
+                        <i>ISCA '13</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Krysta M. Svore, Alfred V. Aho, Andrew W. Cross, Isaac Chuang, and Igor L. Markov. 2006.
+                        <a href="http://ieeexplore.ieee.org/document/1580386/">A Layered Software Architecture for Quantum Computing Design Tools</a>.
+                        <i>Computer 39(1)</i>.
+                    </summary>
+                </details>
+
+                <details>
+                    <summary>
+                        Lingling Lao, Daniel M. Manzano, Hans van Someren, Imran Ashraf, and Carmen G. Almudever. 2019.
+                        <a href="https://arxiv.org/abs/1908.04226">Mapping of quantum circuits onto NISQ superconducting
+              processors</a>.
+                        <i>arXiv.1908.04226</i>.
+                    </summary>
+                </details>
+
+
+
+                <!------------------------>
+                <!--  QHLs              -->
+                <!------------------------>
+                <li>Quantum Hoare Logics</li>
+
+                <details>
+                    <summary>
+                        Li Zhou, Nengkun Yu, and Mingsheng Ying. 2019.
+                        <a href="https://doi.org/10.1145/3314221.3314584">An Applied Quantum Hoare Logic</a>.
+                        <i>PLDI '19</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Dominique Unruh. 2019.
+                        <a href="https://doi.org/10.1109/LICS.2019.8785779">Quantum Hoare Logic with Ghost Variables</a>.
+                        <i>LICS '19</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Dominique Unruh. 2019.
+                        <a href="https://doi.org/10.1145/3290346">Quantum Relational Hoare Logic</a>.
+                        <i>Proc. ACM Program. Lang. 3, POPL, Article 33 (January 2019), 31 pages</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Mingsheng Ying. 2011.
+                        <a href="http://dl.acm.org/citation.cfm?doid=2049706.2049708">Floyd-Hoare Logic for Quantum Programs</a>.
+                        <i>TOPLAS 33(6)</i>.
+                    </summary>
+                    <p>
+                        Q: i) for deterministic quantum programs?
+                    </p>
+                </details>
+
+
+
+
+                <!------------------------>
+                <!--  Q Algo. Verif.    -->
+                <!------------------------>
+                <li>Verification of Quantum Algorithms</li>
+
+
+
+                <!------------------------>
+                <!--  Misc.             -->
+                <!------------------------>
+                <li>Misc.</li>
+                <details>
+                    <summary>
+                        Yunong Shi, Xupeng Li, Runzhou Tao, Ali Javadi-Abhari, Andrew W. Cross, Frederic T. Chong, and Ronghui Gu. 2019.
+                        <a href="https://arxiv.org/abs/1908.08963">Contract-based verification of a realistic quantum compiler</a>.
+                        <i>arXiv.1908.08963</i>.
+                    </summary>
+                </details>
+                <details>
+                    <summary>
+                        Kesha Hietala, Robert Rand, Shih-Han Hung, Xiaodi Wu, and Michael Hicks. 2019.
+                        <a href="http://www.cs.umd.edu/~rrand/voqc_draft.pdf">A Verified Optimizer for Quantum Circuits</a>.
+                        <i>Draft</i>.
+                    </summary>
+                </details>
+
+
+            </ul>
+
+        </div>
+
+
+        <!------------------------>
+        <!--  Page Info         -->
+        <!------------------------>
+        <div id="pageinfo">
+            <p>
+                <address><a href="mailto://jianghr@pcl.ac.cn">Hanru Jiang</a></address>
+                <!-- Created: Tue Sep 2 21:59:18 EST 2019 -->
+                <!-- hhmts start -->
+                Last modified: Nov 20, 2019
+                <!-- hhmts end -->
+            </p>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

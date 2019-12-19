@@ -1,0 +1,160 @@
+#wrap {
+    width: 960px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #333;
+    font: 14px Georgia, "Bitstream Charter", serif;
+}
+
+#info {
+    height: 110px;
+}
+
+#descr {
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-left: 20;
+}
+
+#descr p {
+    padding-left: 2em;
+}
+
+#venue {
+    float: right;
+    font-style: italic;
+    margin: 15 10 0 0;
+    padding-left: 10px;
+    line-height: 20px;
+    border-left: 2px solid #dddddd;
+}
+
+#nav {
+    border: solid #222;
+    border-width: 1px 0 2px;
+    display: block;
+    margin: 10 10 10 10;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    height: 42px;
+}
+
+#nav ul {
+    font-size: 12px;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    padding-inline-start: 40px;
+}
+
+#nav li {
+    float: left;
+    margin: 0;
+    position: relative;
+}
+
+#nav a {
+    font-size: 14px;
+    color: #222;
+    display: block;
+    line-height: 42px;
+    letter-spacing: 0.3em;
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav .current_page_item a,
+#nav li:hover>a,
+#nav ul ul :hover>a {
+    background: #222;
+    color: #fff;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 16px;
+}
+
+infocard {
+    margin-right: .5em;
+}
+
+infocard speaker {
+    font-weight: bold;
+}
+
+infocard time {}
+
+materials {
+    display: inline-block;
+    margin: 5 5 5 10;
+}
+
+ul {
+    display: block;
+    list-style-type: square;
+    padding-inline-start: 30px;
+}
+
+li {
+    margin: 5 0 10 0;
+}
+
+li>p {
+    margin: 5 0 5 10;
+}
+
+#reading ul>li {
+    list-style-type: none;
+    margin: 10 0 10 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#reading details {
+    margin: 5 0 0 15;
+}
+
+#reading details>p {
+    font-family: arial;
+    margin: 10px 0px 10px 20px;
+    padding: 5px 10px 5px 10px;
+    border: 1px dashed;
+    border-color: #dddddd;
+}
+
+details summary::-webkit-details-marker {
+    font-size: 70%;
+}
+
+#pageinfo {
+    border-top: 1px solid #333;
+    text-align: right;
+    margin: 10;
+}
+
+a {
+    color: #1c9bdc;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1873a1;
+}
+
+a:hover {
+    text-decoration: underline;
+}
