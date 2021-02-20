@@ -1,32 +1,32 @@
 body {
-	font-family:      times new roman;
-  background: #ffffff;
-  color: #000000;
+    font-family: Georgia, Serif;
+    background: #ffffff;
+    color: #000000;
 }
 
 td {
-  color: black
+    color: black
 }
 
 li {
-  list-style-type: square;
-  list-style-position: outside;
+    list-style-type: square;
+    list-style-position: outside;
 }
-   
+
 a:link {
-  color: #003399;
-  text-decoration: none;
-  font-weight: bold
+    color: #003399;
+    text-decoration: none;
+    font-weight: bold
 }
 
 a:visited {
-  color: #003399;
-  text-decoration: none;
-  font-weight: bold
+    color: #003399;
+    text-decoration: none;
+    font-weight: bold
 }
 
 a:hover {
-  text-decoration: underline
+    text-decoration: underline
 }
 
 
