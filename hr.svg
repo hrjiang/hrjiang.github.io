@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+     x="0px" y="0px" width="40px" height="4px" viewBox="0 0 700 70" fill="#c0c0d0">
+  <defs>
+    <!-- A -->
+    <svg id="a" width="70px" height="70px">
+      <path d="M 16, 6 l -10, 10 v 38 l 10, 10 h 38 l 10, -10 v -38 l -10, -10 h -22 l -10, 10 v 22 l 10, 10 h 16 v -10 h -16 v -22 h 22 v 38 h -38 z"/>
+      <path d="M 38, 22 v 10 h 10 v -10 z"/>
+    </svg>
+
+    <!-- B -->
+    <svg id="b" width="70px" height="70px">
+      <path d="M 6, 6 v 10 h 10 v -10 z"/>
+      <path d="M 54, 6 v 10 h 10 v -10 z"/>
+      <path d="M 6, 22 v 10 h 16 l 10, -10 v -16 h -10 v 16 z"/>
+      <path d="M 64, 22 v 10 h -16 l -10, -10 v -16 h 10 v 16 z"/>
+      <path d="M 16, 48 h 38 v 16 l 10, -10 v -6 l -10, -10 h -38 l -10, 10 v 6 l 10, 10 z"/>
+      <path d="M 22, 54 v 10 h 26 v -10 z"/>
+    </svg>
+
+    <!-- C -->
+    <svg id="c" width="70px" height="70px">
+      <path d="M 6, 16 h 16 v 6 h -6 l -10, 10 v 6 l 10, 10 h 6 v 6 h -16 l 10, 10 h 6 l 10, -10 v -6 l -10, -10 h -6 v -6 h 6 l 10, -10 v -6 l -10, -10 h -6 z"/>
+      <path d="M 64, 16 h -16 v 6 h 6 l 10, 10 v 6 l -10, 10 h -6 v 6 h 16 l -10, 10 h -6 l -10, -10 v -6 l 10, -10 h 6 v -6 h -6 l -10, -10 v -6 l 10, -10 h 6 z"/>
+    </svg>
+
+    <!-- D -->
+    <svg id="d" width="70px" height="70px">
+      <path d="M 6, 16 h 48 v 48 l 10, -10 v -38 l -10, -10 h -38 z"/>
+      <path d="M 6, 22 h 32 l 10, 10 v 22 l -10, 10 h -22 l -10, -10 h 32 v -22 h -32 z"/>
+      <path d="M 6, 38 v 10 h 26 v -10 z"/>
+    </svg>
+    
+    <!-- E -->
+    <svg id="e" width="70px" height="70px">
+      <path d="M 6, 6 v 10 h 10 v -10 z"/>
+      <path d="M 54, 6 v 10 h 10 v -10 z"/>
+      <path d="M 32, 16 h 6 v 16 h 10 v -16 l -10, -10 h -6 l -10, 10 v 16 h 10 z"/>
+      <path d="M 32, 48 l -10, -10 h -6 v -16 h -10 v 16 l 10, 10 h 6 v 6 h -16 l 10, 10 h 6 l 10, -10z"/>
+      <path d="M 38, 48 v 6 l 10, 10 h 6 l 10, -10 h -16 v -6 h 6 l 10, -10 v -16 h -10 v 16 h -6 z"/>
+    </svg>
+
+    <!-- F -->
+    <svg id="f" width="70px" height="70px">
+      <path d="M 16, 16 h 38 v 16 h 10 v -16 l -10, -10 h -38 l -10, 10 v 16 h 10 z"/>
+      <path d="M 6, 38 h 10 v 16 h 6 v -22 l 10, -10 h 6 l 10, 10 v 22 h 6 v -16 h 10 v 16 l -10, 10 h -6 l -10, -10 v -22 h -6 v 22 l -10, 10 h -6 l -10, -10 z"/>
+    </svg>
+
+    <!-- G -->
+    <svg id="g" width="70px" height="70px">
+      <path d="M 6, 54 l 10, 10 h 22 l 10, -10 v -22 l -10, -10 h -6 l -10, 10 v 6 h -6 v -22 h 38 v 48 l 10, -10 v -38 l -10, -10 h -38 l -10, 10 v 22 l 10, 10 h 6 l 10, -10 v -6 h 6 v 22 z"/>
+    </svg>
+    
+    <!-- H -->
+    <svg id="h" width="70px" height="70px">
+      <path d="M 6, 6 v 10 h 10 v -10 z"/>
+      <path d="M 22, 6 v 10 h 10 v -10 z"/>
+      <path d="M 38, 6 v 10 h 10 v -10 z"/>
+      <path d="M 54, 6 v 10 h 10 v -10 z"/>
+      <path d="M 32, 48 h 6 v 16 h 10 v -16 l -10, -10 h -6 l -10, 10 v 16 h 10 z"/>
+      <path d="M 16, 32 h 38 v 32 l 10, -10 v -22 l -10, -10 h -38 l -10, 10 v 22 l 10, 10 z"/>
+    </svg>
+
+    <!-- I -->
+    <svg id="i" width="70px" height="70px">
+      <path d="M 6, 32 h 10 v -16 h 6 v 38 l 10, 10 h 6 l 10, -10 v -38 h 6 v 16 h 10 v -16 l -10, -10 h -6 l -10, 10 v 38 h -6 v -38 l -10, -10 h -6 l -10, 10 z"/>
+      <path d="M 6, 38 v 10 h 10 v -10 z"/>
+      <path d="M 54, 38 v 10 h 10 v -10 z"/>
+      <path d="M 6, 54 v 10 h 10 v -10 z"/>
+      <path d="M 54, 54 v 10 h 10 v -10 z"/>    
+    </svg>
+
+    <!-- J -->
+    <svg id="j" width="70px" height="70px">
+      <path d="M 6, 16 v 6 l 10, 10 h 6 l 10, -10 v -6 h 22 v 48 l 10, -10 v -38 l -10, -10 h -22 l -10, 10 v 6 h -6 v -16 z"/>
+      <path d="M 6, 38 v 10 h 10 v -10 z"/>
+      <path d="M 22, 38 v 10 h 10 v -10 z"/>
+      <path d="M 6, 54 h 32 v -32 h 10 v 32 l -10, 10 h -22 z"/>
+    </svg>
+
+    <!-- K -->
+    <svg id="k" width="70px" height="70px">
+      <path d="M 6, 16 v 38 l 10, 10 v -58 z"/>
+      <path d="M 22, 6 v 26 h 10 v -26 z"/>
+      <path d="M 22, 38 v 26 h 10 v -26 z"/>
+      <path d="M 38, 6 v 26 h 10 v -26 z"/>
+      <path d="M 38, 38 v 26 h 10 v -26 z"/>
+      <path d="M 54, 6 v 58 l 10, -10 v -38 z"/>
+    </svg>
+
+    <!-- L -->
+    <svg id="l" width="70px" height="70px">
+      <path d="M 6, 16 v 22 l 10, 10 h 6 l 10, -10 v -22 h 32 l -10, -10 h -22 l -10, 10 v 22 h -6 v -32 l -10, 10 z"/>
+      <path d="M 38, 22 v 10 h 26 v -10 z"/>
+      <path d="M 38, 38 v 10 h 26 v -10 z"/>
+      <path d="M 6, 54 h 58 l -10, 10 h -38 z"/>
+    </svg>
+    
+    <!-- M -->
+    <svg id="m" width="70px" height="70px">
+      <path d="M 6, 16 h 58 l -10, -10 h -38 z"/>
+      <path d="M 6, 22 h 16 l 10, 10 v 16 h -10 v -16 h -16 z"/>
+      <path d="M 64, 22 h -16 l -10, 10 v 16 h 10 v -16 h 16 z"/>
+      <path d="M 6, 38 v 10 h 10 v -10 z"/>
+      <path d="M 54, 38 v 10 h 10 v -10 z"/>
+      <path d="M 6, 54 h 58 l -10, 10 h -38 z"/>
+    </svg>
+
+    <!-- N -->
+    <svg id="n" width="70px" height="70px">
+      <path d="M 6, 16 h 16 v 6 h -16 v 10 h 16 l 10, -10 v -6 l -10, -10 h -6 z"/>
+      <path d="M 38, 6 v 32 h -22 l -10, 10 v 6 l 10, 10 h 38 l 10, -10 v -38 l -10, -10 v 48 h -38 v -6 h 22 l 10, -10 v -32 z"/>
+    </svg>
+    
+    <!-- O -->
+    <svg id="o" width="70px" height="70px">
+      <path d="M 22, 6 v 10 h 10 v -10 z"/>
+      <path d="M 38, 6 v 10 h 10 v -10 z"/>
+      <path d="M 16, 6 l -10, 10 v 6 l 10, 10 h 6 v 22 l 10, 10 h 6 l 10, -10 v -22 h 6 l 10, -10 v -6 l -10, -10 v 16 h -6 l -10, 10 v 22 h -6 v -22 l -10, -10 h -6 z"/>
+      <path d="M 6, 38 v 16 l 10, 10 v -26 z"/>
+      <path d="M 64, 38 v 16 l -10, 10 v -26 z"/>
+    </svg>
+    
+    <!-- P -->
+    <svg id="p" width="70px" height="70px">
+      <path d="M 22, 6 v 10 h 26 v -10 z"/>
+      <path d="M 22, 22 v 10 h 26 v -10 z"/>
+      <path d="M 22, 38 v 10 h 26 v -10 z"/>
+      <path d="M 16, 6 l -10, 10 v 38 l 10, 10 h 38 l 10, -10 v -38 l -10, -10 v48 h -38 z"/>
+    </svg>
+
+    <!-- Q -->
+    <svg id="q" width="70px" height="70px">
+      <path d="M 6, 6 v 10 h 10 v -10 z"/>
+      <path d="M 22, 6 v 10 h 10 v -10 z"/>
+      <path d="M 6, 32 v 22 l 10, 10 v -32 h 22 l 10, -10 v -16 h -10 v 16 h -22 z "/>
+      <path d="M 54, 6 v 58 l 10, -10 v -38 z"/>
+      <path d="M 22, 38 v 26 h 10 v -26 z"/>
+      <path d="M 38, 38 v 26 h 10 v -26 z"/>
+    </svg>
+    
+    <!-- R -->
+    <svg id="r" width="70px" height="70px">
+      <path d="M 6, 54 v 10 h 10 v -10 z"/>
+      <path d="M 54, 54 v 10 h 10 v -10 z"/>
+      <path d="M 6, 38 v 10 h 16 v 6 l 10, 10 h 6 l 10, -10 v -6 h 16 v -10 h -16 l -10, 10 v 6 h -6 v -6 l -10, -10 z"/>
+      <path d="M 6, 16 v 16 h 10 v -16 h 6 v 6 l 10, 10 h 6 l 10, -10 v -6 h 6 v 16 h 10 v -16 l -10, -10 h -6 l -10, 10 v 6 h -6 v -6 l -10, -10 h -6 z"/>
+    </svg>
+
+    <!-- S -->
+    <svg id="s" width="70px" height="70px">
+      <path d="M 6, 16 v 38 l 10, 10 h 16 v -10 h -16 v -38 h 16 v -10 h -16 z"/>
+      <path d="M 64, 16 v 38 l -10, 10 h -16 v -10 h 16 v -38 h -16 v -10 h 16 z"/> 
+      <path d="M 22, 22 v 10 h 26 v -10 z"/>
+      <path d="M 22, 38 v 10 h 26 v -10 z"/>
+    </svg>
+
+    <!-- T -->
+    <svg id="t" width="70px" height="70px">
+      <path d="M 22, 6 v 10 h 26 v -10 z"/>
+      <path d="M 6, 16 v 22 l 10, 10 h 6 l 10, -10 v -6 h 6 v 6 l 10, 10 h 6 l 10, -10 v -22 l -10, -10 v 32 h -6 v -6 l -10, -10 h -6 l -10, 10 v 6 h -6 v -32 z"/>
+      <path d="M 6, 54 h 58 l -10, 10 h -38 z"/>
+    </svg>
+
+    <!-- U -->
+    <svg id="u" width="70px" height="70px">
+      <path d="M 22, 22 v 10 h 10 v -10 z"/>
+      <path d="M 38, 22 v 10 h 10 v -10 z"/>
+      <path d="M 6, 16 v 22 l 10, 10 h 32 v -10 h -32 v -22 h 32 v -10 h -32 z"/>
+      <path d="M 54, 6 v 42 h 10 v -36 z"/>
+      <path d="M 6, 54 h 58 l -10, 10 h -38 z"/>
+    </svg>
+
+    <!-- V -->
+    <svg id="v" width="70px" height="70px">
+      <path d="M 6, 16 v 38 l 10, 10 v -48 h 38 v 6 h -22 l -10, 10 v 32 h 10 v -32 h 22 l 10, -10 v -6 l -10, -10 h -38 z"/>
+      <path d="M 38, 38 v 26 h 10 v -26 z"/>
+      <path d="M 64, 38 v 16 l -10, 10 v -26 z"/>
+    </svg>
+
+    <!-- W -->
+    <svg id="w" width="70px" height="70px">
+      <path d="M 6, 16 h 16 v 22 l 10, 10 h 6 l 10, -10 v -22 h 16 l -10, -10 h -6 l -10, 10 v 22 h -6 v -22 l -10, -10 h -6 z"/>
+      <path d="M 6, 22 v 32 l 10, 10 h 38 l 10, -10 v -32 h -10 v 32 h -38 v -32 z"/>
+    </svg>
+
+    <!-- X -->
+    <svg id="x" width="70px" height="70px">
+      <path d="M 6, 16 h 16 v 6 l 10, 10 h 6 l 10, -10 v -6 h 16 l -10, -10 h -6 l -10, 10 v 6 h -6 v -6 l -10, -10 h -6 z"/>
+      <path d="M 6, 22 v 26 h 10 v -26 z"/>
+      <path d="M 54, 22 v 26 h 10 v -26 z"/>
+      <path d="M 6, 54 h 16 v -6 l 10, -10 h 6 l 10, 10 v 6 h 16 l -10, 10 h -6 l -10, -10 v -6 h -6 v 6 l -10, 10 h -6 z"/>
+    </svg>
+
+    <!-- Y -->
+    <svg id="y" width="70px" height="70px">
+      <path d="M 6, 16 h 16 v 48 h 10 v -48 l -10, -10 h -6 z"/>
+      <path d="M 6, 22 v 32 l 10, 10 v -42 z"/>
+      <path d="M 64, 54 h -16 v -48 h -10 v 48 l 10, 10 h 6 z"/>
+      <path d="M 64, 48 v -32 l -10, -10 v 42 z"/>
+    </svg>
+
+    <!-- Z -->
+    <svg id="z" width="70px" height="70px">
+      <path d="M 6, 16 h 48 v 22 h -6 v -16 h -10 v 16 l 10, 10 h 6 l 10, -10 v -22 l -10, -10 h -38 z"/>
+      <path d="M 64, 54 h -48 v -22 h 6 v 16 h 10 v -16 l -10, -10 h -6 l -10, 10 v 22 l 10, 10 h 38 z"/>
+    </svg>
+
+    <!-- 0 -->
+    <svg id="0" width="70px" height="70px">
+      <path d="M 6, 16 v 38 l 10, 10 v -48 h 24 v -10 h -24 z"/>
+      <path d="M 64, 54 v -38 l -10, -10 v 48 h -24 v 10 h 24 z"/>
+      <path d="M 30, 30 v 10 h 10 v -10 z"/>
+    </svg>
+
+    <!-- 1 -->
+    <svg id="1" width="70px" height="70px">
+      <path d="M 6, 6 v 10 h 10 v -10 z"/>
+      <path d="M 6, 30 v 10 h 25 l 10, -10 v -24 h -10 v 24 z"/>
+      <path d="M 6, 54 l 10, 10 h 38 l 10, -10 v -38 l -10, -10 v 48 z"/>
+    </svg>
+    
+    <!-- 2 -->
+    <svg id="2" width="70px" height="70px">
+      <path d="M 6, 16 v 14 l 10, 10 h 38 l 10, -10 v -14 l -10, -10 v 24 h -38 v -24 z"/>
+      <path d="M 30, 6 v 10 h 10 v -10 z"/>
+      <path d="M 6, 54 h 58 l -10, 10 h -38 z"/>
+    </svg>
+
+    <!-- 3 -->
+    <svg id="3" width="70px" height="70px">
+      <path d="M 64, 6 v 10 h -10 v -10 z"/>
+      <path d="M 64, 30 v 10 h -25 l -10, -10 v -24 h 10 v 24 z"/>
+      <path d="M 64, 54 l -10, 10 h -38 l -10, -10 v -38 l 10, -10 v 48 z"/>
+    </svg>
+
+    <!-- 4 -->
+    <svg id="4" width="70px" height="70px">
+      <path d="M 16, 6 h 14 l 10, 10 v 38 l -10, 10 h -14 l -10, -10 h 24 v -38 h -24 z"/>
+      <path d="M 6, 30 h 10 v 10 h -10 z"/>
+      <path d="M 54, 6 v 58 l 10, -10 v -38 z"/>
+    </svg>
+
+    <!-- 5 -->
+    <svg id="5" width="70px" height="70px">
+      <path d="M 16, 6 h 38 l 10, 10 h -48 v 24 h -10 v -24 z"/>
+      <path d="M 54, 64 h -38 l -10, -10 h 48 v -24 h 10 v 24 z"/>
+      <path d="M 30, 30 v 10 h 10 v -10 z"/>
+    </svg>
+
+    <!-- 6 -->
+    <svg id="6" width="70px" height="70px">
+      <path d="M 54, 6 h -14 l -10, 10 v 38 l 10, 10 h 14 l 10, -10 h -24 v -38 h 24 z"/>
+      <path d="M 64, 30 h -10 v 10 h 10 z"/>
+      <path d="M 16, 6 v 58 l -10, -10 v -38 z"/>
+    </svg>
+
+    <!-- 7 -->
+    <svg id="7" width="70px" height="70px">
+      <path d="M 6, 64 v -10 h 10 v 10 z"/>
+      <path d="M 6, 40 v -10 h 25 l 10, 10 v 24 h -10 v -24 z"/>
+      <path d="M 6, 16 l 10, -10 h 38 l 10, 10 v 38 l -10, 10 v -48 z"/>
+    </svg>
+
+    <!-- 8 -->
+    <svg id="8" width="70px" height="70px">
+      <path d="M 6, 54 v -14 l 10, -10 h 38 l 10, 10 v 14 l -10, 10 v -24 h -38 v 24 z"/>
+      <path d="M 30, 64 v -10 h 10 v 10 z"/>
+      <path d="M 6, 16 h 58 l -10, -10 h -38 z"/>
+    </svg>
+
+    <!-- 9 -->
+    <svg id="9" width="70px" height="70px">
+      <path d="M 54, 54 v 10 h 10 v -10 z"/>
+      <path d="M 64, 40 v -10 h -25 l -10, 10 v 24 h 10 v -24 z"/>
+      <path d="M 64, 16 l -10, -10 h -38 l -10, 10 v 38 l 10, 10 v -48 z"/>
+    </svg>
+
+    <!-- . -->
+    <svg id="." width="70px" height="70px">
+      <path d="M 6, 16 v 38 l 10, 10 h 14 l 10, -10 v -24 h -10 v 24 h -14 v -38 h 38 v 48 h 10 v -48 l -10, -10 h -38 z"/>
+    </svg>
+
+    <!-- - -->
+    <svg id="-" width="70px" height="70px">
+      <path d="M 6, 6 v 10 h 10 v -10 z"/>
+      <path d="M 54, 54 v 10 h 10 v -10 z"/>
+      <path d="M 30, 6 v 10 h 24 v 14 h -38 l -10, 10 v 14 l 10, 10 h 24 v -10 h -24 v -14 h 38 l 10, -10 v -14 l -10, -10 z"/>
+    </svg>
+
+    <!-- ? -->
+    <svg id="?" width="70px" height="70px">
+      <path d="M 6, 6 v 10 h 10 v -10 z"/>
+      <path d="M 54, 54 v 10 h 10 v -10 z"/>
+      <path d="M 6, 30 v 10 h 10 v -10 z"/>
+      <path d="M 54, 30 v 10 h 10 v -10 z"/>
+      <path d="M 6, 54 l 10, 10 h 14 l 10, -10 v -38 h 24 l -10, -10 h -14 l -10, 10 v 38 z"/>
+    </svg>
+    
+    <!-- ! -->
+    <svg id="!" width="70px" height="70px">
+      <path d="M 6, 16 v 38 l 10, 10 v -48 h 14 v 38 l 10, 10 h 14 l 10, -10 v -38 l -10, -10 v 48 h -14 v -38 l -10, -10 h -13 z"/>
+    </svg>
+    
+    
+  </defs>
+
+  <!-- Hanru Jiang -->
+  <use href="#h" x="0px"/>
+  <use href="#a" x="70px"/>	
+  <use href="#n" x="140px"/>	
+  <use href="#r" x="210px"/>
+  <use href="#u" x="280px"/>
+  <use href="#j" x="350px"/>
+  <use href="#i" x="420px"/>	
+  <use href="#a" x="490px"/>	
+  <use href="#n" x="560px"/>	
+  <use href="#g" x="630px"/>	
+</svg>
