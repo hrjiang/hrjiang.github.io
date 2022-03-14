@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>How to install Coq + Emacs + Proof General on Windows</title>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <style>
+      code { background-color: #f1f1f1; }
+    </style>
+  </head>
+  <body style="font-family: Georgia;">
+    <div style="width: 960px;margin: 0 auto;">
+      
+      <h1>How to install Coq + Emacs + Proof General on Windows</h1>
+      
+      <h3>Coq</h3>
+      <ol>
+	<li>
+	  Download Coq from <a href="https://coq.inria.fr/download">https://coq.inria.fr/download</a>, and install it.
+	  As an example, my installation directory is <code>C:\Coq</code>.</li>
+	<li>
+	  Add the installation directory (in my case <code>C:\Coq\bin</code>) to the system environment <code>PATH</code>.
+	  <a href="https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them">Here</a>
+	  is what is and how to set <code>PATH</code>.</li>
+
+      </ol>
+      
+      <h3>Emacs</h3>
+      <ol>
+	<li>Download Emacs for Windows from <a href="https://www.gnu.org/software/emacs/download.html#windows">https://www.gnu.org/software/emacs/download.html#windows</a>.</li>
+	<li>Run emacs after installation, and do some random change of options in the "Options" menu (you can always change it back) an then press "Save options". This will generate <code>.emacs</code> in you <code>HOME</code> directory. For me on Windows 10, as an example, the generated <code>.emacs</code> is found at <code>C:\users\userID\AppData\Roaming</code>. </li>
+	<li>Add the following lines to the <code>.emacs</code> file to use the MELPA repository for installing Proof General and others later.<br>
+	  <code>
+	    (require 'package)<br>
+	    (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)<br>
+	    (package-initialize)
+	  </code>
+	</li>
+	<li>Here are more detailed <a href="https://www.emacswiki.org/emacs/MsWindowsInstallation">instructions</a> for installing Emacs.
+      </ol>
+
+      
+      <h3>Proof General</h3>
+      <ol>
+	<li>
+	  You may install and byte-complie Proof General, Company-Coq (a collection of extensions for Proof General's Coq mode, which is optional), and its dependencies by typing successively:<br>
+	  <code>
+	    M-x package-refresh-contents RET<br>
+	    M-x package-install RET proof-general RET<br>
+	    M-x package-install RET company-coq RET
+	  </code><br>
+	  By default, <code>M-x</code> is hitting <code>ALT</code> and <code>X</code> simultaneously, and <code>RET</code> is hitting <code>ENTER</code>.
+	</li>
+	<li>
+	  Add the following to your <code>.emacs</code> file to enable Company-Coq automatically:
+	  <br>
+	  <code>(add-hook 'coq-mode-hook #'company-coq-mode)</code>
+	</li>
+	<li>
+	  More detailed instructions can be found
+	  <a href="https://proofgeneral.github.io">here</a> and
+	  <a href="https://github.com/cpitclaudel/company-coq">here</a>.
+	</li>
+      </ol>
+    </div>
+  </body>
+</html>

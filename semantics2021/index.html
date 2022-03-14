@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+  <head>
+    <title>Formal Semantics of Programming Languages</title>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <style>
+      body { font-family: 'Palatino', Georgia, serif; line-height: 1.3; }
+      hr { border: 0; border-top: 2px dashed #999; }
+      ft { font-family: Courier New; font-size: 11; }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 960px;margin: 0 auto;">
+      <a href="http://www.bimsa.cn">
+	<img src="../bimsa.jpeg" width=80 height=80 style="float:left; margin: 0 25 0 0;">
+      </a>
+      <div style="margin: 10 0 10 0;">
+	<h1>Formal Semantics of Programming Languages</h1>
+	<h3>Spring 2021, BIMSA</h3>
+      </div>
+      <hr>
+      <!------------------------>
+      <!-- Course Info        -->
+      <!------------------------>
+      <h3>Course Information</h3>
+      <table>
+	<tr>
+	  <td style="vertical-align:top; text-align:right;"><b>Abstract:</b></td>
+	  <td style="vertical-align:top;">In this course we will study methods to define behaviors of programs, and methods to reason about properties of programs. We will also practice building verified programs using Coq.</td>
+	</tr>
+	<tr>
+	  <td style="vertical-align:top; text-align:right;"><b>Time:</b></td>
+	  <td style="vertical-align:top;">Tuesday and Thursday, 8:00am - 9:35am, starting from Feb 23</td>
+	</tr>
+	<tr>
+	  <td style="vertical-align:top; text-align:right;"><b>Classroom:</b></td>
+	  <td style="vertical-align:top;">1120</td>
+	</tr>
+	<tr>
+	  <td style="vertical-align:top; text-align:right;"><strike><b>TencentMeeting:</b></strike></td>
+	  <td style="vertical-align:top;"><strike>678 2220 5860</strike></td>
+	</tr>
+	<tr style="color:red">
+	  <td style="vertical-align:top; text-align:right;"><b>Zoom:</b></td>
+	  <td style="vertical-align:top;">388 528 9728, pw: BIMSA</td>
+	</tr>
+	<tr>
+	  <td style="vertical-align:top; text-align:right;"><b>Instructor:</b></td>
+	  <td style="vertical-align:top;"><a href="../index.html">Hanru Jiang</a></td>
+	</tr>
+      </table>
+      <hr>
+      <!------------------------>
+      <!-- Lecture Notes      -->
+      <!------------------------>
+      <h3>Lecture Notes</h3>
+      <ul>
+	<li><b>[02/23]</b>:
+	  Introduction (<a href="./lecturenotes/01_Introduction.pdf">notes</a>)
+	  and Coq tutorial (<a href="./lecturenotes/02_CoqOverview.pdf">Overview</a> and <a href="./lecturenotes/CoqFiles.zip"> Coq files</a> used for the demo).<br>
+	  Here is <a href="./lecturenotes/CoqInstallation.html">how to intall</a> Coq, Emacs and Proof General on Windows.
+	  Linux and Mac users may prefer installing Coq via <a href="https://coq.inria.fr/opam-using.html">opam</a>, then install <a href="https://www.gnu.org/software/emacs/download.html#nonfree">Emacs</a> and <a href="https://proofgeneral.github.io/doc/master/userman/Obtaining-and-Installing/">Proof General</a> following their instructions.
+	</li>
+	<li><b>[02/25]</b>:
+	  Coq tutorial, continued.
+	</li>
+	<li><b>[03/02]</b>:
+	  Mathematical foundations (<a href="./lecturenotes/03_math.pdf">notes</a>).
+	</li>
+	<li><b>[03/04]</b>:
+	  Lambda calculus - I (<a href="./lecturenotes/04_lambda.pdf">notes</a>).<br>
+	  Read the first three sections of <a href="./lambdanotes.pdf">Peter Selinger's lecture notes</a>.
+	  Also see <a href="http://worrydream.com/AlligatorEggs/">Alligator Eggs for Untyped Lambda Calculus</a> for fun.
+	</li>
+	<li><b>[03/09]</b>:
+	  Lambda calculus - II
+	</li>
+	<li><b>[03/11]</b>:
+	  Simply typed lambda calculus - I (<a href="./lecturenotes/05_types.pdf">notes</a>).
+	</li>
+	<li><b>[03/16]</b>:
+	  Simply typed lambda calculus - II (demo, <a href="https://softwarefoundations.cis.upenn.edu/plf-current/Stlc.html">Stlc.v</a> in Software Foundations Vol. 2).
+	</li>
+	<li><b>[03/18]</b>:
+	  Operational semantics - I (<a href="./lecturenotes/06_operational.pdf">notes</a>).
+	</li>
+	<li><b>[03/23]</b>:
+	  Operational semantics - II.
+	</li>
+	<li><b>[03/25]</b>:
+	  Denotaional semantics (<a href="./lecturenotes/07_denotational.pdf">notes</a>).
+	</li>
+	<li><b>[03/30]</b>:
+	  Hoare logic - I (<a href="./lecturenotes/08_Hoare.pdf">notes</a>).
+	</li>
+	<li><b>[04/01]</b>:
+	  Hoare logic - II.
+	</li>
+	<li><b>[04/06]</b>:
+	  Hoare logic - III.
+	</li>
+	<li><b>[04/08]</b>:
+	  Hoare logic in Coq (<a href="https://softwarefoundations.cis.upenn.edu/plf-current/Hoare.html">Hoare.v</a>,
+	  <a href="https://softwarefoundations.cis.upenn.edu/plf-current/Hoare2.html">Hoare2.v</a>,
+	  <a href="https://softwarefoundations.cis.upenn.edu/plf-current/HoareAsLogic.html">HoareAsLogic.v</a> in Software Foundations Vol. 2).
+	</li>
+	<li><b>[04/13]</b>:
+	  Separation logic - I (<a href="./lecturenotes/09_separation.pdf">notes</a>).
+	</li>
+	<li><b>[04/15]</b>:
+	  Separation logic - II.
+	</li>
+	<li><b>[04/20]</b>:
+	  Separation logic - III.
+	</li>
+	<li><b>[04/22]</b>:
+	  Concurrency (<a href="./lecturenotes/10_concur.pdf">notes</a>).
+	</li>
+	<li><b>[04/26]</b>:
+	  Compiler verification - I (<a href="https://xavierleroy.org/courses/DSSS-2017/">course materials</a> by Xavier Leroy).
+	  
+	</li>
+	<li><b>[04/28]</b>:
+	  Compiler verification - II.
+	</li>
+	<li><b>[05/06]</b>:
+	  Compiler verification - III.
+	</li>
+	<li><b>[05/11]</b>:
+	  Compiler verification - IV.
+	</li>
+	<li><b>[05/13]</b>:
+	  Compiler verification - V.
+	</li>
+      </ul>
+      <hr>
+      <!------------------------>
+      <!-- Textbooks and Refs -->
+      <!------------------------>
+      <h3>Textbooks and References</h3>
+      <ul>
+	<li>Textbooks: lecture notes and handouts</li>
+	<li>References:
+	  <ul>
+	    <li>Benjamin C. Pierce, et al. <a href="https://softwarefoundations.cis.upenn.edu">Software Foundations</a>.</li>
+	    <li>John C. Reynolds. Theories of Programming Languages, Cambridge University Press.</li>
+	    <li>Hanne Riis Nielson, Flemming Nielson. Semantics with Applications: A Formal Introduction.</li>
+	    <li>Robert Harper. <a href="http://www.cs.cmu.edu/~rwh/pfpl">Practical Foundations for Programming Languages</a>.
+	      (The online <a href="http://www.cs.cmu.edu/~rwh/pfpl/2nded.pdf">abridged preview edition</a>)
+	    </li>
+	  </ul>
+	</li>
+      </ul>
+
+
+      
+      
+      <hr>
+      <!-- Created: Feb 18 21:59:18 EST 2021 -->
+      <!-- hhmts start -->
+      <ft>Last modified: Apr 19, 2021</ft>
+      <!-- hhmts end -->
+    </div>
+
+  </body>
+
+</html>

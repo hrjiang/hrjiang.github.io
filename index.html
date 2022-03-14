@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Hanru Jiang's Homepage</title>
@@ -6,163 +6,129 @@
   <meta name="keywords" content="蒋瀚如, Compiler Verification, Program Verification, Concurrency, Quantum Computing"/>
   <meta name="robots" content="noindex">
   <style>
-  @font-face {
-   font-family: 'Linux Libertine';
-   src: url('http://linuxlibertine.sourceforge.net/fonts/LinLibertine_R.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
- }
- 
- @font-face {
-   font-family: 'Linux Libertine'; /* italic */
-   src: url('http://linuxlibertine.sourceforge.net/fonts/LinLibertine_RI.woff') format('woff');
-   font-weight: normal;
-   font-style: italic;
- }
-
- @font-face {
-   font-family: 'Linux Libertine'; /* bold */
-   src: url('http://linuxlibertine.sourceforge.net/fonts/LinLibertine_RB.woff') format('woff');
-   font-weight: bold;
-   font-style: normal;
- }
-
- @font-face {
-   font-family: 'Linux Libertine'; /* bold */
-   src: url('http://linuxlibertine.sourceforge.net/fonts/LinLibertine_RBI.woff') format('woff');
-   font-weight: bold;
-   font-style: italic;
- }
-
- @font-face {
-   font-family: 'Libertinus Mono'; /* bold */
-   src: url('/static/fonts/linux-libertine/LinLibertine_RZ.woff') format('woff');
-   font-weight: bold;
-   font-style: italic;
- }
- 
- hr { height: 7px; background: url("hr.svg") repeat-x 0 0; border: 0 }
- ft { font-family: Courier New; font-size: 11; }
- tt {
-   font-family: Courier New; font-size: 14;
- }
-
- a:link {
-   color: rgb(10,115,230);
- }
-
- a:visited {
-   color: rgb(10,115,230);
- }
-
- emph {
-  color: rgb(230,115,10);
-
-}
-</style>
+    hr { height: 7px; background: url("hr.svg") repeat-x 0 0; border: 0 }
+    ft { font-family: Courier New; font-size: 9pt; }
+    body { font-family: 'Palatino'; line-height: 1.3; width: 800px; margin: 0 auto; }
+    div { padding: 0px 10px; }
+    ul ul { font-size: 10pt; }
+    a:link { color: rgb(39,117,182); }
+    a:visited { color: rgb(39,117,182); }
+    emph { color: rgb(207,72,19); }
+  </style>
 </head>
 
-<body style="font-family: Linux Libertine">
+<body>
+  <!------------------------>
+  <!-- Info               -->
+  <!------------------------>
+  <div style="min-height: 200px;">
+    <img src="pic.jpg" width=150 height=200 style="float:left; margin-right: 20px;">
+    <h2>Hanru Jiang （蒋瀚如）</h2>
+    <p style="line-height: 1.5;">
+      Assistant Professor
+      <br>
+      <!-- Advisors: <a href="http://cs.nju.edu.cn/xyfeng">Xinyu Feng</a> and <a href="http://cs.nju.edu.cn/hongjin">Hongjin Liang</a><br> -->
+      <a href="http://www.bimsa.cn">Yanqi Lake Beijing Institute of Mathematical Sciences and Applications</a>
+      <br>
+      <strong>Contact:</strong>
+      <br>
+      Room 1128A, Building 11, Yanqi Island, Huairou District, Beijing 101408 China<br>
+      <tt>hanru AT bimsa DOT cn</tt>
+    </p>
+  </div>
+  <!------------------------>
+  <!-- Research interests -->
+  <!------------------------>
+  <hr>
+  <div>
+    <h3>Research</h3>
+    <p>
+      My research interests are in the area of programming languages and formal methods. In particular, I am interested in developing theories and tools to build formally certified compilers, that rigorously preserve safety, security
+      and correctness. I am also interested in quantum programming languges and quantum program transformations.
+    </p>
+  </div>
+  <!------------------------>
+  <!-- Teaching           -->
+  <!------------------------>
+  <hr>
+  <div>
+    <h3>Teaching</h3>
+    <ul>
+      <li><a href="./semantics/index.html">Formal Semantics of Programming Languages</a>, Spring 2022</li>
+      <li><a href="./fopl/index.html">Foundations of Programming Languages</a>, Fall 2021</li>
+      <li>In the past
+        <ul>
+          <li><a href="./semantics2021/index.html">Formal Semantics of Programming Languages</a>, Spring 2021</li>
+        </ul>
+    </ul>
+  </div>
+  <!------------------------>
+  <!-- Publications       -->
+  <!------------------------>
+  <hr>
+  <div>
+    <h3>Publications</h3>
+    <ul>
+      <li>
+        <b>Incorrectness Logic for Quantum Programs</b>
+        <br>
+        Peng Yan, <b>Hanru Jiang</b>, Nengkun Yu.
+        <br>
+        To appear in <cite>OOPSLA 2022</cite>.
+        <!-- Conditionally accepted by <cite>The OOPSLA issue of the Proceedings of the ACM on Programming Languages (PACMPL), 2022.</cite> -->
+        <br> 
+        <!-- [<a href="./ilq/ilq.pdf">Draft</a>]
+        [<a href="./ilq/ilq-tr.pdf">TR</a>]
+        [<a href="https://github.com/hrjiang/ilq-impl">Impl</a>] -->
+      </li>
+      <li>
+        <b>Quingo: A Programming Framework for Heterogeneous Quantum-Classical Computing with NISQ Features.</b>
+        <br>
+        Xiang Fu, Jintao Yu, Xing Su, <b>Hanru Jiang</b>, et al.
+        <br>
+        <cite>ACM Transactions on Quantum Computing</cite>, Volume 2, Issue 4. December 2021. Article No.: 19, pp 1–37. 
+        <br>
+        [<a href="https://doi.org/10.1145/3483528">Open Access @ACM</a>]
+      </li>
+      <li>
+        <b>Symbolic Reasoning about Quantum Circuits in Coq</b>
+        <br>
+        Wenjun Shi, Qinxiang Cao, Yuxin Deng, <b>Hanru Jiang</b>, Yuan Feng.
+        <br>
+        <cite>Journal of Computer Science and Technology.</cite> 2021, Vol. 36. Issue (6): 1291-1306.
+        <br>
+        [<a href="https://doi.org/10.1007/s11390-021-1637-9">@Springer</a>]
+      </li>
+      <li>
+        <img style="width:80px;height:80px;float:right" src="acm_artifacts_evaluated_functional.jpg">
+        <b>Towards Certified Separate Compilation for Concurrent Programs.</b>
+        <br>
+        <b>Hanru Jiang</b>, Hongjin Liang, Siyang Xiao, Junpeng Zha, Xinyu Feng.
+        <br> In <cite>Proc. 40th ACM SIGPLAN Conference on Programming Language Design and Implementation (<b>PLDI'19</b>)</cite>,
+        Phoenix, Arizona, USA, pages 111-125, June 2019.
+        <b><emph>(Distinguished papar award)</emph></b>
+        <br>
+        [<a href="./ccc/pldi19-ccc.pdf">Paper</a>]
+        [<a href="https://doi.org/10.1145/3314221.3314595">@ACM</a>]
+        [<a href="./ccc/pldi19-ccc-slides.key">Slides(keynote)</a>]
+        [<a href="./ccc/pldi19-ccc-slides.pdf">Slides(pdf)</a>]
+        [<a href="https://plax-lab.github.io/publications/ccc">More...</a>]
+      </li>
+      <li>
+        <b>Non-preemptive Semantics for Data-Race-Free Programs.</b>
+        <br>
+        Siyang Xiao, <b>Hanru Jiang</b>, Hongjin Liang, Xinyu Feng.
+        <br>
+        In: <cite>Fischer B., Uustalu T. (eds) Theoretical Aspects of Computing – ICTAC 2018. ICTAC 2018. Lecture Notes in Computer Science, vol 11187. Springer, Cham.</cite>
+        <br>
+        [<a href="./ccc/npsem-drf.pdf">Paper</a>]
+        [<a href="https://doi.org/10.1007/978-3-030-02508-3_27">@Springer</a>]
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <!-- Created: Tue Jun 18 21:59:18 EST 2019 -->
+  <ft>Last modified: Mon 2022-03-14</ft>
 
-  <div style="width: 960px;margin: 0 auto;">
-    <!------------------------>
-    <!-- Info               -->
-    <!------------------------>
-    <img src="pic.jpg" width=150 height=200 style="float:left; margin: 5 25 5 5;">
-    <h1>Hanru Jiang （蒋瀚如）</h1>
-    <font size="4">
-      <p>Assistant Professor<br>
-       <!-- Ph.D. Advisors: <a href="http://cs.nju.edu.cn/xyfeng">Xinyu Feng</a> and <a href="http://cs.nju.edu.cn/hongjin">Hongjin Liang</a><br> -->
-       <a href="http://www.bimsa.cn">Yanqi Lake Beijing Institute of Mathematical Sciences and Applications</a></p>
-       <strong>Contact:</strong>
-       <p>Room 1128A, Building 11, Yanqi Island, Huairou District, Beijing 101408 China
-         <br>
-         <tt>hanru AT bimsa DOT cn</tt>
-       </p>
-     </font>
-     <hr>
-     <!------------------------>
-     <!-- Research interests -->
-     <!------------------------>
-     <font size="4">
-      <strong>Research</strong>
-      <p>
-        My research interests are in the area of programming languages and formal methods. In particular, I am interested in developing theories and tools to build formally certified compilers, that rigorously preserve safety, security
-        and correctness. I am also interested in quantum programming languges and quantum program transformations.
-      </p>
-      <hr>
-      <strong>Teaching</strong>
-      <ul>
-        <li><a href="./fopl/index.html">Foundations of Programming Languages</a>, Fall 2021</li>
-        <li><a href="./semantics/index.html">Formal Semantics of Programming Languages</a>, Spring 2021</li>
-      </ul>
-      <hr>
-      <strong>Publications and drafts</strong>
-      <ul>
-        <!---
-        <li>
-          <b>Incorrectness Logic for Quantum Programs</b>
-          <br>
-          <b>Hanru Jiang</b>, Peng Yan, Nengkun Yu.
-          <br>
-          Under peer review.
-          <br>[
-          <a href="./ilq/ilq.pdf">Draft</a> ] [
-          <a href="./ilq/ilq-tr.pdf">TR</a> ] [
-          <a href="https://github.com/hrjiang/ilq-impl">Impl</a> ]
-        </li>
-        --->
-        <li>
-          <b>Quingo: A Programming Framework for Heterogeneous Quantum-Classical Computing with NISQ Features.</b>
-          <br>
-          Xiang Fu, Jintao Yu, Xing Su, <b>Hanru Jiang</b>, et al.
-          <br>
-          Accepted by <cite>Special Issue on Software Tools for Quantum Computing, ACM Transactions on Quantum Computing (TQC).</cite>
-          <br>[
-          <a href="https://arxiv.org/abs/2009.01686">Draft@arXiv</a> ]
-        </li>
-        <li>
-          <b>Symbolic Reasoning about Quantum Circuits in Coq</b>
-          <br>
-          Wenjun Shi, Qinxiang Cao, Yuxin Deng, <b>Hanru Jiang</b>, Yuan Feng.
-          <br>
-          Under peer review.
-          <br>[
-          <a href="https://arxiv.org/abs/2005.11023">Draft@arXiv</a> ]
-        </li>
-        <li>
-          <b>Towards Certified Separate Compilation for Concurrent Programs.</b>
-          <br>
-          <b>Hanru Jiang</b>, Hongjin Liang, Siyang Xiao, Junpeng Zha, Xinyu Feng.
-          <br> In <cite>Proc. 40th ACM SIGPLAN Conference on Programming Language Design and Implementation (<b>PLDI'19</b>)</cite>,
-          Phoenix, Arizona, USA, pages 111-125, June 2019.
-          <b><emph>(Distinguished papar award)<emph></b>)
-
-            <br> [
-            <a href="./ccc/pldi19-ccc.pdf">Paper</a> ] [
-            <a href="https://doi.org/10.1145/3314221.3314595">@ACM</a> ] [
-            <a href="./ccc/pldi19-ccc-slides.key">Slides(keynote)</a> ] [
-            <a href="./ccc/pldi19-ccc-slides.pdf">Slides(pdf)</a> ] [
-            <a href="https://plax-lab.github.io/publications/ccc">More...<a> ]
-            </li>
-            <li>
-              <b>Non-preemptive Semantics for Data-Race-Free Programs.</b>
-              <br>
-              Siyang Xiao, <b>Hanru Jiang</b>, Hongjin Liang, Xinyu Feng.
-              <br>
-              In: <cite>Fischer B., Uustalu T. (eds) Theoretical Aspects of Computing – ICTAC 2018. ICTAC 2018. Lecture Notes in Computer Science, vol 11187. Springer, Cham.</cite>
-              <br> [
-              <a href="./ccc/npsem-drf.pdf">Paper</a> ] [
-              <a href="https://doi.org/10.1007/978-3-030-02508-3_27">@Springer</a> ]
-            </li>
-          </ul>
-        </font>
-        <hr>
-        <!-- Created: Tue Jun 18 21:59:18 EST 2019 -->
-        <ft>Last modified: Tue 2021-08-31</ft>
-      </div>
-    </body>
-    </html>
-    <!-- Local Variables: -->
-    <!-- time-stamp-pattern: "-8/<ft>Last modified:[ \t]+%3a %:y-%02m-%02d</ft>" -->
-    <!-- End: -->
+</body>
+</html>
