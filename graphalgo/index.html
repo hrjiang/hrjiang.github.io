@@ -5,41 +5,44 @@
 	<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
 	<meta name="robots" content="noindex">
 	<link href='https://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css' />
+	<script type="text/javascript"
+		src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
+	</script>
 	<style>
-		body { font-family: 'Fenix', sans-serif; line-height: 1.4; background-color: #f2eee5; color: #5b6664 }
-		h1, h2, h3 { color: #11171c }
-		hr { border: 0; border-top: 1px dashed #999; }
+		body { font-family: 'Fenix', sans-serif; line-height: 1.4; background-color: rgb(255,254,252); color: rgba(0,0,0,0.6)}
+		/*bg : #f2eee5; color: #5b6664 */
+		h1, h2, h3 { color: rgb(17,17,17) }
+		/*h1, h2, h3 { color: #11171c }		*/
+		hr { border: 0; border-top: 2px solid rgba(0,0,0,0.2); }
 		dt { font-weight: bold; }
 		ft { font-family: Courier New; font-size: 9pt; }
-		a:link { color: #1172b4; } 
-    	a:visited { color: #1172b4; }
-		emph { color: #ac4c32; } /* luoxiahong */
+		a:link { color: rgb(72,114,185); } 
+    	a:visited { color: rgb(72,114,185); }
+		emph { color: #e16259; } 
+
+		.head {	display: inline; vertical-align: middle; }
 	</style>
 </head>
 
 <body>
-	<div style="width: 960px;margin: 0 auto;">
-		<a href="http://www.bimsa.cn">
-			<img src="../bimsa.png" width=80 height=80 style="float:left; margin: 0 25px 0 0;">
-		</a>
-		<div style="margin: 10px 0px;">
-			<h1>Graph Algorithms</h1>
-			<h3>Fall 2022, BIMSA</h3>
+	<div style="width: 86%;margin: 0 auto;">
+		<div>
+			<img src="../bimsa.png" width=50 height=50 class="head">
+			<div class="head"> </div>
+			<h1 class="head">Graph Algorithms</h1>
 		</div>
 		<hr>
 		<!------------------------>
 		<!-- Course Info        -->
 		<!------------------------>
-		<h3>Course Information</h3>
+		<!-- <h3>Course Information</h3> -->
 		<dl>
 			<dt>Abstract</dt>
 			<dd>In this course, we introduce basic concepts in graph theory and complexity theory, then study graph algorithms with a focus on matching and network flows. </dd>
 			<dt>Time</dt>
-			<dd>Every Tue. and Thu., 15:20 - 16:55, from Sep. 13 to Dec. 8</dd>
+			<dd>Tue and Thu, <emph>15:20 - 16:55</emph>, from Sep. 13 to Dec. 8, 2022</dd>
 			<dt>Classroom</dt>
-			<dd>1118</dd>
-			<dt>Zoom</dt>
-			<dd><emph>242 742 6089</emph>, pw: BIMSA</dd>
+			<dd>1118 & Zoom:<emph>242 742 6089</emph>, pw: BIMSA</dd>
 		</dl>
 		<hr>
 		<!------------------------>
@@ -47,40 +50,50 @@
 		<!------------------------>
 		<h3>Upcoming Topics</h3>
 		<ul>
-			<li><b>[09/15]</b>: GI, continued.
+			<li><b>[09/20] GI, continued.</b>
 				<br>
-				<small>
-					<ul>
-						<li>Karp-reduction, P/NP, NPC, Cook-Levin theorem</li>
-						<li>GI universality proof</li>
-						<!-- <li>GI is easy for almost all graphs proof</li> -->
-					</ul>
-				</small>
+				Outline:
+				<ul>
+					<li>GI as a complexity class</li>
+					<li>GI $\le_p$ Bipartite Graph Isomorphism</li>
+					<li>GI $\le_p$ Regular Graph Isomorphism</li>
+					<li>GI $\le_p$ Self-complementary Graph Isomorphism</li>
+					<!-- <li>GI is easy for almost all graphs</li> -->
+				</ul>
+				Reading:
+				<ul>
+					<li><a href="https://cs.uwaterloo.ca/research/tr/1977/CS-77-04.pdf">Problems Polynomially Equivalent to Graph Isomorphism, by Booth and Colbourn</a></li>
+					<li>Chapter 4, <a href="https://doi.org/10.1007/BF02104746">Graph isomorphism problem, by Zemlyachenko, Korneenko and Tyshkevich</a></li>
+				</ul>
+			<li><b>[09/15] GI, continued.</b>
+				<br>
+				<ul>
+					<li>Karp-reduction, P/NP, NPC, Cook-Levin theorem</li>
+					<li>GI universality proof</li>
+					<!-- <li>GI is easy for almost all graphs proof</li> -->
+				</ul>
 			</li>
-			<li><b>[09/13]</b>:
-				The graph isomorphism (GI) problem.
+			<li><b>[09/13] The graph isomorphism (GI) problem.</b>
 				<br>
-				<small>
-					Outline:
-					<ul>
-						<li>Graph definitions, notations</li>
-						<li>Graph isomorphism background and application</li>						
-						<li>Degree sequence and color-refinement (1-d Weisfeiler-Leman algorithm)</li>
-						<li>Universality of GI</li>
-					</ul>
-					Reading:
-					<ul>
-						<li>Chapter 1, Reference 1; review artical in CACM [<a href="https://cacm.acm.org/magazines/2020/11/248220-the-graph-isomorphism-problem/fulltext">Grohe, Schweitzer. 2020.</a>]</li>
-						<li>P = NP iff NPI (NP-Intermediate, i.e., NP - P - NPC) is empty [<a href="https://doi.org/10.1145/321864.321877">Ladner. 1975.</a>]</li>
-						<li>Another problem that is in NP-Intermediate status is factoring, which has polynomial quantum algorithm [<a href="https://doi.org/10.1109/SFCS.1994.365700">Shor. 1994.</a>]</li>
-						<li>State-of-the-art algorithm: quasi-polynomial [<a href="https://doi.org/10.48550/arXiv.1512.03547">Babai. 2015.</a>]</li>
-						<li>GI is hard to solve with quite limited memory [<a href="https://doi.org/10.1137/S009753970241096X">Toran. 2004.</a>]</li>
-						<li>GI is easy for almost all graphs [<a href="https://doi.org/10.1137/0209047">Babai, Erdos, Selkow. 1980.</a>, <a href="https://doi.org/10.1109/SFCS.1979.8">Babai, Kucera. 1979.</a>]</li>
-						<li>GI has short zero-knowledge proof [<a href="https://doi.org/10.1007/3-540-47721-7_11">Goldreich, Micali, Wigderson. 1986.</a>]</li>
-						<li>GI is universal [<a href="https://doi.org/10.1145/800105.803404">Miller. 1977.</a>]</li>
-						<li>CFI-construction [<a href="https://doi.org/10.1007/BF01305232">Cai, Furer, Immerman. 1992.</a>]</li>
-					</ul>
-				</small>
+				Outline:
+				<ul>
+					<li>Graph definitions, notations</li>
+					<li>Graph isomorphism background and application</li>						
+					<li>Degree sequence and color-refinement (1-d Weisfeiler-Leman algorithm)</li>
+					<li>Universality of GI</li>
+				</ul>
+				Reading:
+				<ul>
+					<li>Chapter 1, Reference 1; review artical in CACM [<a href="https://cacm.acm.org/magazines/2020/11/248220-the-graph-isomorphism-problem/fulltext">Grohe, Schweitzer. 2020.</a>]</li>
+					<li>P = NP iff NPI (NP-Intermediate, i.e., NP - P - NPC) is empty [<a href="https://doi.org/10.1145/321864.321877">Ladner. 1975.</a>]</li>
+					<li>Another problem that is in NP-Intermediate status is factoring, which has polynomial quantum algorithm [<a href="https://doi.org/10.1109/SFCS.1994.365700">Shor. 1994.</a>]</li>
+					<li>State-of-the-art algorithm: quasi-polynomial [<a href="https://doi.org/10.48550/arXiv.1512.03547">Babai. 2015.</a>]</li>
+					<li>GI is hard to solve with quite limited memory [<a href="https://doi.org/10.1137/S009753970241096X">Toran. 2004.</a>]</li>
+					<li>GI is easy for almost all graphs [<a href="https://doi.org/10.1137/0209047">Babai, Erdos, Selkow. 1980.</a>, <a href="https://doi.org/10.1109/SFCS.1979.8">Babai, Kucera. 1979.</a>]</li>
+					<li>GI has short zero-knowledge proof [<a href="https://doi.org/10.1007/3-540-47721-7_11">Goldreich, Micali, Wigderson. 1986.</a>]</li>
+					<li>GI is universal [<a href="https://doi.org/10.1145/800105.803404">Miller. 1977.</a>]</li>
+					<li>CFI-construction [<a href="https://doi.org/10.1007/BF01305232">Cai, Furer, Immerman. 1992.</a>]</li>
+				</ul>
 			</li>
 		</ul>
 		<hr>
@@ -100,7 +113,7 @@
 
 		<ft>
 			<a href="../index.html">Back</a><br>
-			Last modified: Sep 15, 2022
+			Last modified: Sep 19, 2022
 		</ft>
 
 	</div>
