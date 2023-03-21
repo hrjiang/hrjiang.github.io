@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main >
+	<div class="container-fluid w-xl-75">
+		<div class="col-11 col-lg-10 col-xl-9  m-auto pt-5">
+			<h1>{{ .Title }}</h1>
+			<p>
+				{{ with .Params.authors }} {{ delimit . ", " }}. {{ end }}
+				{{ with .Params.proc }} <em>{{ . }}</em> {{ end }}
+				{{ with .Date }} {{ .Format "2006" }}. {{ end }}</p>
+			<p>
+			{{ .Content }}
+			</div>
+		</div>
+	</div>
+</main>
+{{ end }}

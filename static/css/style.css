@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Linux Libertine'), url('https://fonts.cdnfonts.com/s/282/LinLibertine_Re-4.1_.8_.woff') format('woff');
+}
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Linux Libertine'), url('https://fonts.cdnfonts.com/s/282/LinLibertine_It-4.0_.3_.woff') format('woff');
+}
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Linux Libertine'), url('https://fonts.cdnfonts.com/s/282/LinLibertine_Bd-4.0_.2_.woff') format('woff');
+}
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Linux Libertine'), url('https://fonts.cdnfonts.com/s/282/LinLibertine_BI-4.0_.3_.woff') format('woff');
+}
+@font-face {
+    font-family: 'Linux Libertine C';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Linux Libertine C'), url('https://fonts.cdnfonts.com/s/282/LinLibertineC_Re-4.0_.1_.woff') format('woff');
+}
+
+.katex { font-size: 1em !important; } 
+
+header {
+	font-family: Optima, Georgia;
+}
+
+.navbar {
+	background-color: rgb(30,50,131); 
+	font-variant: small-caps;
+	letter-spacing: 0.15rem;
+}
+
+.nav-link {
+	padding: 0px;
+}
+
+.feather-16{
+    width: 16px;
+    height: 16px;
+}
+
+main {
+	font-family: "Linux Libertine", Palatino, Georgia;	
+}
+
+.logo {
+	-ms-flex: 0 0 80px;
+    flex: 0 0 80px;
+}
+
+main >* h1 {
+	font-size: 2rem;
+	margin: 0;
+}
+
+main >* h2 {
+	font-size: 1.5rem;
+}
+
+main >* h3 {
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.footer {
+	font-family: "Courier New";
+	font-size: 0.8rem;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sticky-top-2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    z-index: 1019;
+  }
+} 
+
+main * {
+    scroll-margin-top: 80px;
+}

@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{- partial "header.html" . -}}
+<main>
+    <div class="container-fluid w-xl-75">
+        <div class="col-10 m-auto pt-5">
+            <div class="row">
+                <div class="col">
+                    <h1>{{ .Title }}</h1>
+                    {{ .Content }}
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table>
+                        <tbody>
+                        <!-- Ranges through content/posts/*.md -->
+                        {{ range .Pages }}
+                            <tr>
+                                <td align=right class="p-2">{{ .Params.semester }}</td>
+                                <td class="p-2">@{{ .Params.institute }}</td>
+                                <td class="p-2"><a href="{{.Permalink}}"> {{.Title}}</a></td>
+                            </tr>
+                        {{ end }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
