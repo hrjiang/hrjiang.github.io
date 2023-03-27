@@ -131,7 +131,7 @@ draft: false
                $$\frac{\ }{(\lambda x. M) (\lambda y. N) \to M[(\lambda y. N)/x]}(\beta)
                \qquad \frac{M\to M'}{M\ N\to M'\ N}
                \qquad \frac{N\to N'}{(\lambda x. M)\ N\to (\lambda x. M)\ N}$$
-         - Exercise: evaluate the following terms in the above reduction/evaluation strategies
+         - Exercise: evaluate the following terms using the above reduction/evaluation strategies
             - $(\lambda x.\lambda y. x\ y)(\lambda x. x)$
             - $(\lambda x. \lambda y. x\ x)(\lambda x. x \ x)$
             - $(\lambda x. x \ x)(\lambda x. x \ x)$
@@ -166,9 +166,135 @@ draft: false
 
 
 ### [Mar 21] STLC
-         
 
+   - Introducing _types_:
+      - Type checking catches "simple" mistakes early
+      - (Type safety) Well-typed programs never go wrong
+      - Type information makes it easier to analyze/optimize a program
+      - (Cons) Impose constraints on programmers, safe programs can be rejected
 
+   - STLC with product and sum type
+
+      - Types
+      $$(\text{Type}) \quad \sigma, \tau ::= T ~|~ \sigma \to \tau ~|~ \sigma\times\tau ~|~ \sigma + \tau $$
+         - $T$: base type, e.g., $\texttt{int}$ or $\texttt{bool}$
+         - $\sigma \to \tau$: function type, for a function that accepts an argument of type $\sigma$, and returns a value of type $\tau$.  
+         $\to$ is right associative: $\sigma \to \sigma' \to \sigma''$ means
+         $\sigma \to (\sigma' \to \sigma'')$
+         - $\sigma \times \tau$: product type, a pair consisting of two values of type $\sigma$ and $\tau$, respectively.
+         - $\sigma + \tau$: sum type, either a value of type $\sigma$, or a value of type $\tau$
+
+      - Terms
+      $$(\text{Term}) \quad M, N ::= x ~|~ \lambda x:\tau.M ~|~ M\ N ~|~ 
+      \langle M, N \rangle ~|~ \pi_1\ M ~|~ \pi_2\ M ~|~ \mathbf{left}\ M ~|~ \mathbf{right}\ M ~|~ \mathbf{case}\ M\ \mathbf{do}\ M_1\ M_2 $$
+         - $\langle M, N \rangle$: a pair consisting of $M$ and $N$
+         - $\pi_i\ M$: projection, to get $M$'s i-th element
+         - $\mathbf{left}\ M$ and $\mathbf{right}\ N$: construction of a sum term.
+           (Think about unions in C)
+         - $\mathbf{case}\ M \ \mathbf{do}\ M_1\ M_2$: conditioning on the value of a sum-type term
+
+      - Reduction rules (rules for subterms are omitted)
+      $$
+         \frac{}{(\lambda x: \tau. M)\ N \to M[N/x]}(\beta)\qquad
+         % \frac{M\to M'}{\lambda x: \tau. M \to \lambda x: \tau. M'}\qquad
+         % \frac{M\to M'}{M\ N \to M'\ N}\qquad
+         % \frac{N\to N'}{M\ N \to M \ N'}
+      $$
+      $$
+         \frac{}{\pi_1 \ \langle M, N \rangle \to M}\qquad
+         \frac{}{\pi_2 \ \langle M, N \rangle \to N}\qquad
+         % \frac{M\to M'}{\langle M, N \rangle \to \langle M', N \rangle}\qquad
+         % \frac{N\to N'}{\langle M, N \rangle \to \langle M, N' \rangle}\qquad
+      $$
+      $$
+         \frac{}{\mathbf{case}\ (\mathbf{left}\ M)\ \mathbf{do}\ M_1\ M_2
+         \to M_1\ M}\qquad
+         \frac{}{\mathbf{case}\ (\mathbf{right}\ M)\ \mathbf{do}\ M_1\ M_2
+         \to M_2\ M}\qquad
+      $$
+
+      - Typing rules
+      $$(\text{Typing Context})\ \Gamma ::= \cdot ~|~ \Gamma, x:\tau$$
+      $$
+         \frac{}{\Gamma, x:\tau \vdash x:\tau}(\text{var})\quad
+         \frac{\Gamma,x:\sigma\vdash M: \tau}{\Gamma\vdash (\lambda x:\sigma.M): \sigma\to\tau}(\text{abs})\quad
+         \frac{\Gamma\vdash M:\sigma\to\tau\quad \Gamma\vdash N:\sigma}{\Gamma \vdash (M\ N) :\tau}(\text{app})
+      $$
+      $$
+         \frac{\Gamma\vdash M:\sigma\quad \Gamma\vdash N:\tau}{\Gamma\vdash \langle M, N \rangle : \sigma\times \tau}(\text{pair})\quad
+         \frac{\Gamma\vdash M: \sigma\times\tau}{\Gamma\vdash (\pi_1\ M):\sigma}(\text{proj1})\quad
+         \frac{\Gamma\vdash M: \sigma\times\tau}{\Gamma\vdash (\pi_2\ M):\tau}(\text{proj2})
+      $$
+      $$
+         \frac{\Gamma\vdash M:\sigma}{\Gamma\vdash \mathbf{left}\ M: \sigma + \tau}(\text{left})\quad
+         \frac{\Gamma\vdash M:\tau}{\Gamma\vdash \mathbf{right}\ M: \sigma + \tau}(\text{right})
+      $$
+      $$
+         \frac{\Gamma\vdash M:\sigma + \tau \quad \Gamma\vdash M_1:\sigma\to\rho \quad \Gamma\vdash M_2: \tau\to\rho}{\Gamma\vdash\mathbf{case}\ M\ \mathbf{do}\ M_1\ M_2 : \rho}(\text{case})
+      $$
+
+      - Soundness (Type safety)
+      $$(\text{Values})\  v ::= \lambda x. M ~|~ \langle v_1, v_2 \rangle ~|~ \mathbf{left}\ v ~|~ \mathbf{right}\ v$$
+      **Theorem**(Type-Safety):  
+      If $\cdot \vdash M:\tau$ and $M\to^* M'$, then  
+      (i) $\cdot \vdash M':\tau$, and  
+      (ii) either $M'\in\text{Values}$ or 
+      $\exists M''. M'\to M''$.  
+      **Proof**. Follows from two key lemmas below. $\square$  
+      **Lemma**(Preservation):
+      Well-typed terms reduces only to well-defined terms of the same type.
+      I.e.,  
+      $$ (\cdot\vdash M:\tau \land M\to M')\implies (\cdot\vdash M': \tau).$$
+      **Lemma**(Progress):
+      A well-typed term is either a value or can be reduced.
+      I.e.,
+      $$(\cdot\vdash M:\tau)\implies (M\in\text{Values})\lor(\exists M'. M\to M').$$
+
+      - Curry-Howard isomorphism
+         - **PaT** principle:
+         **P**ropositions **a**re **T**ypes,
+         **P**roofs **a**re **T**erms
+
+         - Propositional logic (natural deduction)
+         $$(\text{Prop})\ p, q ::= B ~|~ p \Rightarrow q ~|~ p\land q ~|~ p\lor q$$
+         $$(\text{Ctxt})\ \Gamma ::= \cdot ~|~ \Gamma,p$$
+         $$
+         \frac{}{\Gamma,p\vdash p}(\text{axiom})\quad
+         \frac{\Gamma,p\vdash q}{\Gamma\vdash p\Rightarrow q}(\Rightarrow\text{-intro})\quad
+         \frac{\Gamma\vdash p\Rightarrow q \quad \Gamma\vdash p}{\Gamma \vdash q}(\Rightarrow\text{-elim})
+         $$
+         $$
+         \frac{\Gamma\vdash p \quad \Gamma \vdash q}{\Gamma \vdash p\land q}(\land\text{-intro})\quad
+         \frac{\Gamma\vdash p\land q}{\Gamma \vdash p}(\land\text{-elim-l})\quad
+         \frac{\Gamma\vdash p\land q}{\Gamma \vdash q}(\land\text{-elim-l})
+         $$
+         $$
+         \frac{\Gamma\vdash p}{\Gamma\vdash p\lor q}(\lor\text{-intro-l})\quad
+         \frac{\Gamma\vdash q}{\Gamma\vdash p\lor q}(\lor\text{-intro-r})\quad
+         $$
+         $$
+         \frac{\Gamma\vdash p\lor q\quad \Gamma\vdash p\Rightarrow r \quad \Gamma\vdash q \Rightarrow r}{\Gamma\vdash r}(\lor\text{-elim})
+         $$
+         Convince yourself that propositional logic and STLC are isomorphic!
+
+         - Can form the basis for automated theorem provers.
+         - Every logic has a corresponding typed system
+
+### [Mar 28] STLC cont': Strong Normalization; System F
+   - Strong Normalization ([Coq demo](./stlc_norm.v))  
+      To install Coq and IDE:
+
+      - [Official website](https://coq.inria.fr/download) for official CoqIDE, or
+      - [Proof General](https://proofgeneral.github.io) for Emacs users, or
+      - [VsCoq](https://github.com/coq-community/vscoq) for VS Code users.  
+      
+      **Definition**(Halts)
+      A term $M$ halts ($\textsf{halts}(M)$) if there is $v\in\text{Value}$ such that $M\to^* v$.  
+
+      **Theorem** STLC is strong normalizing. That is, for any term $M$ and type $\tau$,
+      $$ \cdot\vdash M:\tau \implies \textsf{halts}(M)$$
+
+   - System F
 
 
 
