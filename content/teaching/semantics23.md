@@ -281,13 +281,13 @@ draft: false
          - Every logic has a corresponding typed system
 
 ### [Mar 28] STLC cont': Strong Normalization; System F
-   - Strong Normalization ([Coq demo](./stlc_norm.v))  
+   - Strong Normalization ([Coq demo](./stlc_norm_demo.v))  
       To install Coq and IDE:
 
       - [Official website](https://coq.inria.fr/download) for official CoqIDE, or
       - [Proof General](https://proofgeneral.github.io) for Emacs users, or
       - [VsCoq](https://github.com/coq-community/vscoq) for VS Code users.  
-      
+
       **Definition**(Halts)
       A term $M$ halts ($\textsf{halts}(M)$) if there is $v\in\text{Value}$ such that $M\to^* v$.  
 
