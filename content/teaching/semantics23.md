@@ -487,6 +487,7 @@ draft: false
          for some well-typed term $M$ and type $\tau$.
 
        - Question: given a closed untyped term $m$, whether we can find a well-typed term $M$ that erases to $m$?
+         
          Answer: No, the problem is undecidable for System F [Wells, 1994].
 
          The loss of type reconstruction is sometimes considered too heavy a price to pay for a feature whose full power is seldom used.
@@ -503,6 +504,34 @@ draft: false
 
    [Notes](./operational.pdf)
 
+### [Apr 18] Denotational Sem.
+
+   [Notes](./denotational.pdf)
+
+<!-- ### [Apr 25] Hoare Logic 
+   
+   TBA
+
+### [May 9] Separation Logic
+
+   TBA
+
+### [May 16] Concurrency and CSL
+
+   TBA
+
+### [May 23] Probabilistic
+
+   TBA
+
+### [May 30] Quantum
+
+   TBA
+
+### [Jun 6] Quantum, cont'
+
+   TBA -->
+
 ---
 
 ## References
@@ -514,4 +543,6 @@ draft: false
 3. John C. Reynolds. Theories of ProgrammingLanguages.
 
 4. Xavier Leroy's [lecture notes](https://xavierleroy.org/CdF/2018-2019/) on Curry-Howard correspondence.
+
+<!-- 5. [Type System Notes](https://users.cs.northwestern.edu/~jesse/course/type-systems-wi18/type-notes/index.html) -->
 

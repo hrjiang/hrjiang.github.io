@@ -6,6 +6,7 @@
         {{ .Content }}
         <!-- List section contents -->
         {{ range .Pages }}
+          {{ if (not .Params.legacy) }}
           <h3>{{.Title}}</h3>
           <ul>
             <!-- For courses, pick the latest one in each series -->
@@ -32,6 +33,7 @@
             {{ end }}
             <li><a href="{{.Permalink}}">...</a></li>
           </ul>
+          {{ end }}
         {{ end }}
       </div>
     </div>
