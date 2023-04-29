@@ -508,11 +508,11 @@ draft: false
 
    [Notes](./denotational.pdf)
 
-<!-- ### [Apr 25] Hoare Logic 
+### [Apr 25] Hoare Logic 
    
-   TBA
+   [Notes](./hoare.pdf)
 
-### [May 9] Separation Logic
+<!-- ### [May 9] Separation Logic
 
    TBA
 
