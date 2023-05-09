@@ -4,6 +4,7 @@ semester: "Spring 2023"
 institute: "BIMSA"
 math: true
 date: 2023-03-09T16:04:18+08:00
+lastmod: 2023-05-08
 draft: false
 ---
 
@@ -163,7 +164,6 @@ draft: false
                - Church's $\mathbf{Y}= \lambda f.(\lambda x. f\ (x\ x))\ (\lambda x. f\ (x\ x))$
                - Excercise: show that $\Theta$ and $\mathbf{Y}$ are fixpoint combinators.
             - Every $\lambda$-term has a fixpoint.
-
 
 ### [Mar 21] STLC
 
@@ -512,11 +512,11 @@ draft: false
    
    [Notes](./hoare.pdf)
 
-<!-- ### [May 9] Separation Logic
+### [May 9] Separation Logic
+   
+   [Notes](./separation.pdf)
 
-   TBA
-
-### [May 16] Concurrency and CSL
+<!-- ### [May 16] Concurrency and CSL
 
    TBA
 
