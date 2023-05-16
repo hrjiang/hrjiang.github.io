@@ -516,11 +516,12 @@ draft: false
    
    [Notes](./separation.pdf)
 
-<!-- ### [May 16] Concurrency and CSL
+### [May 16] Concurrency and CSL
 
-   TBA
+   [Concurrency Notes](./concur.pdf),
+   [CSL paper by Viktor Vafeiadis](https://people.mpi-sws.org/~viktor/papers/mfps2011-cslsound.pdf)
 
-### [May 23] Probabilistic
+<!-- ### [May 23] Probabilistic
 
    TBA
 
