@@ -521,10 +521,11 @@ draft: false
    [Concurrency Notes](./concur.pdf),
    [CSL paper by Viktor Vafeiadis](https://people.mpi-sws.org/~viktor/papers/mfps2011-cslsound.pdf)
 
-<!-- ### [May 23] Probabilistic
+### [May 23] Semantics of Probabilistic Programs
 
-   TBA
+   TBA..
 
+<!--
 ### [May 30] Quantum
 
    TBA
