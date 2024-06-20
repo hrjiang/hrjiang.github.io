@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+	<div class="col-11">
+		<h2 class="my-5">Tiny problems that I found interesting...</h2>
+			{{- range (sort .Pages ".Date").Reverse }}
+		        {{- partial "postsummary.html" . -}}
+		    {{- end}}
+		</div>
+	</div>
+</div>
+{{ end }}

@@ -1,0 +1,39 @@
+body {
+	font-family: 'PT Serif', 'Nato Serif SC', sans-serif;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 18px;
+}
+.profile img {
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	padding: 20px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.bio {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.links a {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.links {
+	margin-bottom: 10px;
+}

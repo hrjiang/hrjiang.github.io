@@ -1,32 +1,46 @@
 {{ define "main" }}
-{{- partial "header.html" . -}}
-<main>
-    <div class="container-fluid w-xl-75">
-        <div class="col-10 m-auto pt-5">
-            <div class="row">
-                <div class="col">
-                    <h1>{{ .Title }}</h1>
-                    {{ .Content }}
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <table>
-                        <tbody>
-                        <!-- Ranges through content/posts/*.md -->
-                        {{ range .Pages }}
-                            <tr>
-                                <td align=right class="p-2">{{ .Params.semester }}</td>
-                                <td class="p-2">@{{ .Params.institute }}</td>
-                                <td class="p-2"><a href="{{.Permalink}}"> {{.Title}}</a></td>
-                            </tr>
-                        {{ end }}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+<div class="row justify-content-center">
+  <div class="col-11">
+    <h2 class="my-5">{{ .Title }}</h2>
+      {{ if eq (.GetPage "teaching").RelPermalink .RelPermalink }}
+      {{/* Page is /content/teaching/_index.md */}}
+      <ul>
+        {{- range .Pages }}
+          {{ $pages := .Pages.ByDate.Reverse }}
+            <li>
+            {{ range first 1 $pages }}
+                <span class="fw-bolder">{{ .Title}}.</span> 
+                <a href="{{ .Permalink }}">{{- .Params.semester }} {{ .Params.year }}</a>.
+            {{ end }}
+
+            
+
+            
+            {{ if gt ($pages | len) 1 }}
+              <p class="mb-0"><small class="text-secondary">In the past: 
+              {{ $count := len $pages }}
+              {{ $index := 1 }}
+              {{ range after 1 $pages }}
+                {{- $index = add $index 1 -}}
+                {{ .Params.semester }} {{ .Params.year -}}
+                {{ if lt $index $count }}, {{ else }}.{{ end }}
+              {{ end }}
+              </small></p>
+            {{ end }}
+            </li>
+        {{- end}}
+      </ul>        
+      {{ else }}
+        {{ .Content }}
+        <ul>
+          {{/* Ranges through content/teaching/ * /index.md */}}
+          {{ range .Pages }}
+            <li>
+              <a href="{{.Permalink}}">{{ .Params.semester }} {{ .Params.year }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
     </div>
-</main>
+</div>
 {{ end }}

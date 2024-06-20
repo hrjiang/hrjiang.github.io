@@ -1,42 +1,29 @@
-{{ define "main" }}
-<main>
-  <div class="container-fluid w-xl-75">
-    <div class="row">
-      <div class="col-11 col-lg-10 col-xl-9 m-auto pt-5">
-        {{ .Content }}
-        <!-- List section contents -->
-        {{ range .Pages }}
-          {{ if (not .Params.legacy) }}
-          <h3>{{.Title}}</h3>
-          <ul>
-            <!-- For courses, pick the latest one in each series -->
-            {{ $titles := slice }}
-            {{ range .Pages }}
-              {{ if (not (in $titles .Title)) }}
-                <li>
-                  <a href="{{.Permalink}}">
-                    <!-- Print academic year for courses -->
-                    {{ if eq (.Type) "teaching" }}
-                      {{ $titles = $titles | append .Title }}
-                      {{ .Date.Format "2006" }} | 
-                    {{ end }}
-                    {{.Title}}.
-                  </a>
-                  {{ if eq (.Type) "publications" }}
-                    <br>
-                    {{ with .Params.authors }} {{ delimit . ", " }}. {{ end }}
-                    {{ with .Params.proc }} <em>{{ . }}</em> {{ end }}
-                    {{ with .Date }} {{ .Format "2006" }}. {{ end }}
-                  {{ end }}
-                </li>
-              {{ end }}
-            {{ end }}
-            <li><a href="{{.Permalink}}">...</a></li>
-          </ul>
-          {{ end }}
-        {{ end }}
-      </div>
+{{- define "main" }}
+<div class="row justify-content-center">
+    <div class="profile col-11 col-md-5">
+        <section id="about">
+        {{- partial "profile.html" . -}}
+        </section>
     </div>
-  </div>
-</main>  
-{{ end }}
+    <div class="col-11 col-md-7 py-4">
+        <section id="teaching">
+        {{- partial "teaching.html" . -}}
+        </section>        
+        <section id="publication">
+        {{- $publications := .Site.GetPage "/publications" }}
+        {{- with $publications }}
+        <h2>{{ .Title }}</h2>
+        <ul>
+            {{- range (where .Pages "Params.featured" true).ByDate.Reverse }}
+                <li>
+                {{- partial "paper.html" . -}}
+                </li>
+            {{- end}}
+            <li><a href="{{- $publications.Permalink -}}">more...</a></li>
+        </ul>
+        {{- end}}
+        </section>
+    </div>
+</div>
+
+{{- end }}

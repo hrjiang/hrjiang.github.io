@@ -1,0 +1,17 @@
+baseURL: https://hrjiang.github.io
+
+enableGitInfo: 
+
+languageCode: en-us
+
+frontmatter:
+  lastmod:
+    - "lastmod"
+    - ":git"
+    - "date"
+
+params:
+  subtitle:
+
+title: Hanru Jiang
+

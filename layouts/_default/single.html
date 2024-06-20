@@ -1,6 +1,12 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+<div class="row justify-content-center">
+	<div class="col-11 col-lg-10 m-auto pt-5">
+		<h1>{{ .Title }}</h1>
+		<p class="text-secondary">Date: {{ .Date.Format "2006-01-02"}}</p>
+		{{ if not (eq .Date .Lastmod) }}
+			<p class="text-secondary">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
+		{{ end }}
+		{{ .Content }}
+    </div>
+</div>
 {{ end }}

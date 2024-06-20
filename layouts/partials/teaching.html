@@ -1,0 +1,15 @@
+{{- $teaching := .Site.GetPage "/teaching" }}
+{{- with $teaching }}
+<h2>{{ .Title }}</h2>
+    {{- $pages := slice }}
+    {{- range .Pages }}
+        {{ range first 1 .Pages.ByDate.Reverse }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+    {{ end }}
+    <ul>
+    {{- range $pages.ByDate.Reverse }}
+        <li><a href="{{- .Permalink -}}">{{ .Title }}, {{ .Params.semester }} {{ .Params.year }}</a></li>
+    {{- end}}
+</ul>
+{{- end}}

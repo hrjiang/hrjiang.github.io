@@ -1,0 +1,29 @@
+{{ $about := .Site.GetPage "/about" }}
+{{- with $about }}
+
+	{{/* name card */}}
+    {{ $img := .Resources.Get "avatar.jpg" }}
+    {{- with $img }}
+	    <img class="profile-img" draggable="false" src="{{- .RelPermalink -}}" alt="profile image"/>
+    {{ end -}}
+
+    <h2 class="text-center">{{- .Params.nameCN -}}</h2>
+    <h2 class="text-center">{{- .Params.nameEN -}}</h2>
+    <h3 class="text-secondary text-center">{{- .Params.role -}}</h3>
+    <h3 class="text-secondary text-center">{{ .Params.office -}}, 
+    	<a href="{{- .Params.institute.url -}}">
+    		{{- .Params.institute.name -}}
+    	</a>
+    </h3>
+    <h3 class="text-secondary text-center">{{ .Params.email -}}</h3>
+
+	{{/* Bio */}}
+	<h3 class="px-5 pt-4 text-center text-secondary">Research Interests</h3>
+	<ul class="px-5 text-center text-secondary">
+    	{{ range .Params.keywords }}
+    		<p class="m-0">{{ . }}</p>
+    	{{ end }}
+	</ul>
+
+{{ end -}}
+

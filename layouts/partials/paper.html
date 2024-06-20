@@ -1,0 +1,63 @@
+<div class="paper-item">
+	{{ $paperbundle := . }}
+	<p class="mb-0 fw-bolder">
+		{{ with .Title }} {{- . -}}. {{ end }}
+	</p>
+	
+	{{- if .Params.authors }}
+		<p class="mb-0">
+		{{ $authors := .Params.authors }}
+		{{ if gt (len $authors) 5 }}
+		  {{ range $index, $author := first 4 $authors }}
+		    {{ . }}
+		    {{- if not (eq (add $index 1) 4) }}, {{ end }}
+		  {{ end }}
+		  , et. al.
+		{{ else }}
+		  {{ range $index, $author := $authors }}
+		    {{ . -}}
+		    {{- if not (eq (add $index 1) (len $authors)) }}, {{ else }}. {{- end }}
+		    {{ if eq (add $index 2) (len $authors) }} and {{ end -}}
+		  {{- end -}}
+		{{ end }}
+
+		</p>
+	{{ end }}
+
+	<p class="mb-0">
+		{{ if .Params.publishedto }}
+			<em>{{ .Params.publishedto }}.</em>
+		{{ else }}
+			<em>Draft.</em>
+		{{ end }}
+		{{ with .Date }} {{ .Format "2006" }}. {{ end }}
+		{{- with .Params.award }}
+			<span class="fw-bolder text-danger">
+				({{ . }})
+			</span>
+		{{- end }}
+		{{- with .Params.badges }}
+			<span>
+			{{- range . }}
+				{{ if .link }}
+				<a href="{{ .link }}"><img height="20px" src="{{ $paperbundle.RelPermalink }}{{ .img }}" alt="{{ .title }}" title="{{ .title }}"/></a>
+				{{ else }}
+					<img height="20px" src="{{ $paperbundle.RelPermalink }}{{ .img }}" alt="{{ .title }}" title="{{ .title }}"/>
+				{{ end }}
+			{{- end }}
+			</span>
+		{{- end }}
+	</p>
+
+	{{/* Links */}}
+	<ul class="m-auto p-0">
+	{{ range .Params.urls }}
+		<li class="d-inline">{{ partial "lib/link-btn.html" (slice .name .url ) }}</li>
+	{{ end }}
+	{{ range .Params.files }}
+		{{ $url := printf "%s%s" $paperbundle.RelPermalink .file }}
+		<li class="d-inline">{{ partial "lib/link-btn.html" (slice .name $url ) }}</li>
+	{{ end }}
+	</ul>
+
+<div>

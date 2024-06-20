@@ -1,28 +1,9 @@
 {{ define "main" }}
-<main >
-	<div class="container-fluid w-xl-75">
-		<div class="col-11 m-auto pt-5">
-			<div class="row align-items-center sticky-top bg-white">
-				<div class="col logo">
-					{{ partial "logo.html" . }}
-				</div>
-				<div class="col">
-					<h1>{{ .Title }}, {{ .Params.semester }}</h1>
-				</div>
-			</div>
-			<br>
-	    	<div class="row">
-	    		<div class="col-12 col-lg-9">
-	      		{{ partial "metadata.html" . }}
-				{{ .Content }}
-				</div>
-				<div class="d-none d-lg-block col-3 pt-5 ps-2">
-			        <aside class="sticky-top-2">
-			          {{ .TableOfContents}}
-			        </aside>
-			    </div>      
-			</div>
-		</div>
-	</div>
-</main>
+<div class="row justify-content-center">
+	<div class="col-11 col-lg-10 m-auto pt-5">
+		<h1>{{ .Title }}</h1>
+		<p class="text-secondary text-center mt-3">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
+		{{ .Content }}
+    </div>
+</div>
 {{ end }}

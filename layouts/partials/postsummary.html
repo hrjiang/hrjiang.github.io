@@ -1,0 +1,25 @@
+{{/* Metadata of a post to be presented:
+	- title
+	- abstract 
+	- coverImg
+	- link
+ */}}
+
+<div class="card">
+  <div class="row g-0">
+    <div class="col-5 col-sm-4 my-auto">
+      {{ with .Resources.Get .Params.coverImg }}
+        <img src="{{ .Permalink }}" class="img-fluid rounded" alt="{{ .Title }}">
+      {{ end }}
+    </div>
+    <div class="col-7 col-sm-8 flex-grow-1 border-start">
+      <div class="card-body rounded">
+        <h5 class="card-title">{{ .Title }}</h5>
+        <p class="card-text">{{ .Params.abstract }}</p>
+        <p class="card-text text-end"><small class="text-muted">Last updated {{ .Lastmod.Format "2006-01-02" }}</small></p>
+      </div>
+    </div>
+    <a href="{{ .Permalink }}" class="stretched-link"></a>
+  </div>
+</div>
+

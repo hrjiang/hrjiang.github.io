@@ -1,16 +1,20 @@
-<header class="navbar sticky-top navbar-expand-md navbar-dark">
-    <ul class="navbar-nav m-auto">
-        {{ range .Site.Menus.main }}
-        <li class="nav-item">
-            <a class="nav-link active" href="{{ .URL }}">
-            {{ if .Pre }}
-            {{ $icon := printf "<i data-feather=\"%s\" class=\"feather-16\"></i> " .Pre | safeHTML }}
-            {{ $icon }}
-            {{ end }}
-            {{ $text := print .Name | safeHTML }}
-            {{ $text }}
-            </a>
-        </li>
-        {{ end }}
-    </ul>
-</header>
+<nav class="navbar sticky-top navbar-expand-sm border-bottom bg-white">
+    <div class="container-sm" style="max-width: 960px">
+        <a class="navbar-brand fw-bold" href="/">{{- .Site.Title -}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                {{ $pageurl := .RelPermalink }}
+                {{ range .Site.Menus.main }}
+                <li class="nav-item">
+                    <a class="nav-link {{ if hasPrefix $pageurl .URL -}} fw-bold text-primary {{- end }}" href="{{ .URL }}">
+                        {{- .Name -}}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>
