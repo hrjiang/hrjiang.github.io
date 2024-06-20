@@ -52,11 +52,11 @@
 	{{/* Links */}}
 	<ul class="m-auto p-0">
 	{{ range .Params.urls }}
-		<li class="d-inline">{{ partial "lib/link-btn.html" (slice .name .url ) }}</li>
+		<li class="d-inline mx-1">{{ partial "lib/link-btn.html" (slice .name .url ) }}</li>
 	{{ end }}
 	{{ range .Params.files }}
 		{{ $url := printf "%s%s" $paperbundle.RelPermalink .file }}
-		<li class="d-inline">{{ partial "lib/link-btn.html" (slice .name $url ) }}</li>
+		<li class="d-inline mx-1">{{ partial "lib/link-btn.html" (slice .name $url ) }}</li>
 	{{ end }}
 	</ul>
 
