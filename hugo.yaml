@@ -1,8 +1,8 @@
-baseURL: https://hrjiang.github.io
+baseURL: 'https://hrjiang.github.io'
 
 enableGitInfo: 
 
-languageCode: en-us
+languageCode: 'en-us'
 
 frontmatter:
   lastmod:
@@ -13,5 +13,5 @@ frontmatter:
 params:
   subtitle:
 
-title: Hanru Jiang
+title: "Hanru Jiang"
 
