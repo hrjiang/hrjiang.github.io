@@ -4,7 +4,7 @@ nameCN: 蒋 瀚如
 nameEN: Hanru Jiang
 avatar: avatar.jpg
 role: Assistant Professor
-office: A3-3a 303
+office: A3-3a-303
 institute:
   name: BIMSA
   url: https://www.bimsa.cn
